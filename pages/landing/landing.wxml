@@ -1,0 +1,43 @@
+<navbar />
+
+<view class="category-container">
+<view class="row-container">
+  <view class="paw-container">
+    <image src="/image/paw1.png" class="paw-icon" mode="aspectFit"/>
+    <text>FOOD</text>
+  </view>
+  <view class="paw-container">
+    <image src="/image/paw2.png" class="paw-icon" mode="aspectFit"/>
+    <text>BARS</text>
+  </view>
+  <view class="paw-container">
+    <image src="/image/paw3.png" class="paw-icon" mode="aspectFit"/>
+    <text>CAFES</text>
+  </view>
+</view>
+<view class="row-container">
+  <view class="paw-container">
+    <image src="/image/paw4.png" class="paw-icon" mode="aspectFit"/>
+    <text>PARKS</text>
+  </view>
+  <view class="paw-container">
+    <image src="/image/paw5.png" class="paw-icon" mode="aspectFit"/>
+    <text>VETS</text>
+  </view>
+  <view class="paw-container">
+    <image src="/image/paw6.png" class="paw-icon" mode="aspectFit"/>
+    <text>OTHER</text>
+  </view>
+</view>
+</view>
+
+
+<view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  </image>
+  <view class="card-product-infos">
+    <view class="h2">{{space.name}}</view>
+    <view class="p">{{space.access}}</view>
+    <view class="p">{{space.features}}</view>
+</view>
+</view>

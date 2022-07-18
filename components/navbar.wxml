@@ -1,0 +1,5 @@
+<!--components/navbar.wxml-->
+<view class="navbar">
+  <view>GOU-GO</view>
+  <image src="/image/gougo.png" class="show-img" mode="aspectFit"/>
+</view>
