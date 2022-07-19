@@ -1,0 +1,30 @@
+<navbar />
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="add-space">
+    <text>Add a location </text>
+    <image src="/image/plus_black.png" class="icon"></image>
+  </view>
+
+  <view class="review-container">
+    <text class="bold-text">My Reviews</text>
+    <text class="yellow-btn">Read More</text>
+  </view>
+
+  <view class="favorites-container">
+    <text class="bold-text">My Favorite Places</text>
+    <text class="yellow-btn">See More</text>
+  </view>
+</view>
+
+

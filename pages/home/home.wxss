@@ -1,0 +1,38 @@
+.hero-img {
+  margin: 40rpx 0;
+  align-items: center;
+  width: 376px;
+  height: 300px;
+  border-radius: 5rpx;
+}
+
+.home-container {
+  margin: 20rpx;
+  text-align: center;
+
+}
+
+.home-container text {
+  display: block;
+}
+
+.home-bold {
+  font-size: 55rpx;
+  font-weight: bold;
+  color: #0078AA;
+  margin-bottom: 90rpx;
+}
+
+.home-small {
+  margin: 20rpx;
+  margin-bottom: 90rpx;
+}
+
+.home-btn {
+  margin: auto;
+  background-color: #F2DF3A;
+  padding: 12px 24px;
+  width: 50%;
+  font-weight: bold;
+  border-radius: 5rpx;
+}
