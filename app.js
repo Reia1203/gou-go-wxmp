@@ -32,6 +32,8 @@ App({
   },
   globalData: {
     userInfo: null,
+    spaces: [],
+
     header: null,
     user: null,
 

@@ -3,6 +3,11 @@
     "pages/landing/landing",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/spaceform/spaceform",
+    "pages/review/review",
+    "pages/picker/picker",
+    "pages/textarea/textarea",
+    "pages/stories/stories"
     "index/index"
   ],
   "usingComponents": {
