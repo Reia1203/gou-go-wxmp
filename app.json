@@ -1,7 +1,17 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/restaurants/restaurants",
+    "pages/bars/bars",
+    "pages/cafes/cafes",
+    "pages/parks/parks",
+    "pages/vets/vets",
+    "pages/other/other", 
+    "pages/show/show" 
+
+
+
   ],
   "window":{
     "backgroundTextStyle":"light",
