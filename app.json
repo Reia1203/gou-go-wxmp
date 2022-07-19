@@ -1,7 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/spaceform/spaceform",
+    "pages/review/review",
+    "pages/picker/picker",
+    "pages/textarea/textarea",
+    "pages/stories/stories"
   ],
   "window":{
     "backgroundTextStyle":"light",
