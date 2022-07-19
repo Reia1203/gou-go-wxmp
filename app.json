@@ -1,6 +1,9 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/landing/landing",
+    "pages/user/user",
+    "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
     "pages/spaceform/spaceform",
@@ -31,9 +34,14 @@
         "selectedIconPath": "image/home.png"
       },
       {
-        "pagePath": "index/index",
+        "pagePath": "pages/search/search",
         "iconPath": "image/search.png",
         "selectedIconPath": "image/search.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user.png"
       }
     ]
   },
