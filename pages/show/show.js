@@ -1,4 +1,4 @@
-// pages/landing/landing.js
+// pages/show/show.js
 const app = getApp();
 Page({
 
@@ -14,26 +14,21 @@ Page({
    */
   onLoad(options) {
     console.log(options)
-    let page = this;
+    console.log(options.id)
+    this.getSpace(options.id);
+  },
+
+  getSpace(id) {
+    const page = this;
     let header = wx.getStorageSync('header')
     wx.request({
-      url: `${app.globalData.baseUrl}/spaces`,
-      // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+      url: `${app.globalData.baseUrl}/spaces/${id}`,
       method: 'GET',
-      header: header,
-      
+      header,
       success(res) {
-        console.log(res)
-        const {spaces} = res.data;
-        // const spaces = res.data.spaces
-        // Update local data
-        page.setData({
-          spaces
-        });
-
-        wx.hideToast();
+        page.setData({ space: res.data.space })
       }
-    });
+    })
   },
 
   /**
@@ -83,19 +78,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  goToSpace(e) {
-    const id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `../show/show?id=${id}`,
-    })
-  },
-
-  goToCategory(e) {
-    const category = e.currentTarget.dataset.category;
-    wx.navigateTo({
-      url: `../category/category?category=${category}`,
-    })
   }
 })

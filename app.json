@@ -6,6 +6,8 @@
     "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/show/show" ,
+    "pages/category/category",
     "pages/spaceform/spaceform",
     "pages/review/review",
     "pages/picker/picker",
