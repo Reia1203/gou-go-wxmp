@@ -14,7 +14,7 @@ Component({
       selectedIconPath: "/image/search.png",
       text: "SEARCH"
     }, {
-      pagePath: "pages/add/add",
+      pagePath: "../spaceform/spaceform",
       iconPath: "/image/plus.png",
       selectedIconPath: "/image/plus.png",
       text: "ADD"

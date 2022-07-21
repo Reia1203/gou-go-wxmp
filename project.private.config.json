@@ -1,41 +1,46 @@
 {
   "projectname": "gou-go-wxmp",
   "setting": {
+
+    "compileHotReLoad": false,
+
     "urlCheck": false
   },
   "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+
   "condition": {
     "miniprogram": {
       "list": [
         {
           "name": "",
-          "pathName": "pages/spaceform/spaceform",
+          "pathName": "pages/home/home",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/picker/picker",
+          "pathName": "pages/landing/landing",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/review/review",
+          "pathName": "pages/user/user",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/textarea/textarea",
+          "pathName": "pages/search/search",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
+
           "name": "landing",
           "pathName": "pages/landing/landing",
           "query": "",
@@ -43,13 +48,14 @@
           "scene": null
         },
         {
-          "name": "user",
-          "pathName": "pages/user/user",
+          "name": "",
+          "pathName": "pages/logs/logs",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
+
           "name": "search",
           "pathName": "pages/search/search",
           "query": "",
@@ -66,11 +72,13 @@
         {
           "name": "home",
           "pathName": "pages/home/home",
+
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
+
           "name": "show",
           "pathName": "pages/show/show",
           "query": "id=1",
@@ -80,6 +88,7 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
+
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -35,6 +35,11 @@
         "selectedIconPath": "image/home.png"
       },
       {
+        "pagePath": "pages/spaceform/spaceform",
+        "iconPath": "image/plus.png",
+        "selectedIconPath": "image/plus.png"
+      },
+      {
         "pagePath": "pages/search/search",
         "iconPath": "image/search.png",
         "selectedIconPath": "image/search.png"
