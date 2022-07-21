@@ -1,4 +1,5 @@
 // pages/show/show.js
+const app = getApp();
 Page({
 
   /**
@@ -12,7 +13,22 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
+    console.log(options)
+    console.log(options.id)
+    this.getSpace(options.id);
+  },
 
+  getSpace(id) {
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces/${id}`,
+      method: 'GET',
+      header,
+      success(res) {
+        page.setData({ space: res.data.space })
+      }
+    })
   },
 
   /**
