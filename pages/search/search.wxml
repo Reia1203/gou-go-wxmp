@@ -1,11 +1,8 @@
 <navbar />
-<view class="page-section">
-        <view class="page-section-title">input</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="input" placeholder="这是一个输入框" />
-            </view>
-          </view>
-        </view>
+<form bindsubmit="submit" class="search-container">
+      <view class="page-section">
+        <view class="page-section-title">Search Gou-Go</view>
+          <input class="weui-input" name="name" placeholder="Ex: Mexican" />
       </view>
+      <button form-type="submit" class="btn-flat yellow-btn">Search</button>
+</form>
