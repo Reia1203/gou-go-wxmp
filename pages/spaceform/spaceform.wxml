@@ -1,0 +1,54 @@
+<!--pages/spaceform/spaceform.wxml-->
+<!--pages/post/post.wxml-->
+
+
+<view class="container-form">
+  <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique"></image>
+  </view>
+  <button bindtap="uploadImage" class="btn-red">Upload Image</button>
+
+    <form bindsubmit="submit">
+      <view class="page-section">
+        <view class="page-section-title">Name</view>
+          <input class="weui-input" name="name" placeholder="Please type name of the space......" />
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">Address</view>
+          <input class="weui-input" name="address" placeholder="Please type address of the space......" />
+      </view>
+
+      <view class="page-section page-section-gap">
+        <checkbox-group name="checkbox">
+        <view class="page-section-title">Where is your dog allowed:</view>
+          <label class="p"><checkbox value="checkbox1" />Outdoor  </label>
+          <label class="p"><checkbox value="checkbox2" />Indoor  </label>
+          <view>
+          <view class="page-section-title">This location provides:</view>
+            <label class="p"><checkbox value="checkbox3" />Dog Bowl  </label>
+            <label class="p"><checkbox value="checkbox4" />Dog Food  </label>
+          </view>
+        </checkbox-group>
+      </view>
+
+
+      <view class="section">
+        <view class="section__title" class="page-section-title">Categories:</view>
+          <picker class="p" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="picker">
+              {{multiArray[0][multiIndex[0]]}} , {{multiArray[1][multiIndex[1]]}}
+            </view>
+          </picker>
+      </view>
+
+
+
+
+
+
+      
+      
+      <button form-type="submit" class="btn-flat">Save</button>
+    </form>
+</view>

@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/landing/landing",
+    "pages/user/user",
+    "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
     "pages/restaurants/restaurants",
@@ -9,16 +13,46 @@
     "pages/vets/vets",
     "pages/other/other", 
     "pages/show/show" 
-
-
-
+    "pages/spaceform/spaceform",
+    "pages/review/review",
+    "pages/picker/picker",
+    "pages/textarea/textarea",
+    "pages/stories/stories"
   ],
+  "usingComponents": {
+    "navbar": "/components/navbar"
+  },
   "window":{
+    "navigationStyle": "custom",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
+
+  "tabBar": {
+    "custom": true,
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/landing/landing",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "image/search.png",
+        "selectedIconPath": "image/search.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user.png"
+      }
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+
+  
 }

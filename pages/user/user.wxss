@@ -1,0 +1,57 @@
+.container {
+  margin: 20px;
+}
+.userinfo {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 240rpx;
+  height: 240rpx;
+  margin: 30rpx 30rpx 30rpx 0;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-weight: bold;
+  font-size: 45rpx;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.add-space {
+  display: flex;
+ font-size: larger;
+ height: 60 rpx;
+ /* justify-content: center; */
+ align-items: center;
+ font-weight: bold;
+ margin-bottom: 50rpx;
+}
+
+.add-space image {
+  margin: 20rpx;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.yellow-btn {
+  background-color: #F2DF3A;
+  width: 200rpx;
+  height: 50rpx;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 5rpx;
+  display: block;
+  text-align: center;
+  margin: 20rpx 0;
+}

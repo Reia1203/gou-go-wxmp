@@ -1,0 +1,24 @@
+<!--pages/review/review.wxml-->
+<view class="card-trip">
+  <image src="https://img0.baidu.com/it/u=637877736,215032142&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=496" />
+  <view class="card-trip-infos">
+    <view>
+      <view class="h2">Tacolicious</view>
+      <view class="p">66 Xingfu Road.</view>
+      <view class="p">Mexican</view>
+    </view>
+    <view class="p" class="card-trip-pricing">1 KM Away</view>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </view>
+  
+</view>
+
+<view>Review</view>
+<view class="section">
+  <textarea class="textarea" placeholder="Tell others more about this space!" auto-focus />
+</view>
+
+<button bindtap="uploadImage" class="btn-red">Upload Image</button>
+
+<view>Rating</view>
+<button form-type="submit" class="btn-flat">Save</button>
