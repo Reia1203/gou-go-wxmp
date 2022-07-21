@@ -154,11 +154,14 @@ Page({
   },
 
   submit(e) {
-    getApp().globalData.spaces.push(e.detail.value);
-    wx.navigateTo({
-      url: '/pages/stories/stories',
-    })
-    console.log(e)
+    let data = e.detail.value
+    data.categories = this.data.multiIndex
+    console.log(1111, data)
+    getApp().globalData.spaces.push(data);
+    // wx.navigateTo({
+    //   url: '/pages/stories/stories',
+    // })
+    // console.log(e)
   },
   /**
    * 生命周期函数--监听页面加载

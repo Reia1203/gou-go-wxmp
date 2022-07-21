@@ -6,12 +6,18 @@
     "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/restaurants/restaurants",
+    "pages/bars/bars",
+    "pages/cafes/cafes",
+    "pages/parks/parks",
+    "pages/vets/vets",
+    "pages/other/other", 
+    "pages/show/show" 
     "pages/spaceform/spaceform",
     "pages/review/review",
     "pages/picker/picker",
     "pages/textarea/textarea",
     "pages/stories/stories"
-    "index/index"
   ],
   "usingComponents": {
     "navbar": "/components/navbar"

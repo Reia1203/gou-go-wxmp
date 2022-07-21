@@ -1,0 +1,12 @@
+<!--pages/show/show.wxml-->
+<text>pages/show/show.wxml</text>
+<view class="card"> </view>
+  <img src="https://th.bing.com/th/id/R.9cc19f7cc04702594e02db59a4a9e4a7?rik=rLRGZcPYdG6xog&riu=http%3a%2f%2fimg.timeoutshanghai.com%2f202004%2f20200417033424100_Large.jpg&ehk=O1wHC%2fHdzu1cpL2jBJy9xMFgqLWZmQSFiPbs3x66KNc%3d&risl=&pid=ImgRaw&r=0" style="width:100%"/>
+  <view class="container">
+    <h1><b>Tacolicious</b></h1>
+    <view> Mexican</view>
+    <view> Inside / Outside </view>
+  </view>
+</view>
+
+
