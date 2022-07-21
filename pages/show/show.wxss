@@ -1,10 +1,69 @@
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; 
+.space-container {
+  margin: 20rpx;
 }
 
-img {
-  border-radius: 5px 5px 0 0;
+.space-container image {
+  width: 100%;
+  border-radius: 5rpx;
+}
+
+.bold-font {
+  font-weight: bold;
+  font-size: 40rpx;
+  display: block;
+}
+
+.features-text {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.space-info {
+  display: flex;
+}
+
+.yellow-btn {
+  background-color: #F2DF3A;
+  width: 100rpx;
+  height: 50rpx;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 5rpx;
+  display: block;
+  text-align: center;
+  align-self: flex-end;
+  position: absolute;
+  right: 30rpx;
+}
+
+.horizontal-line {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #9E9E9E;
+  margin: 40rpx 0;
+}
+
+.review-container {
+  height: 200rpx;
+  margin: 20rpx;
+}
+
+.review-btn {
+  background-color: #F2DF3A;
+  width: 200rpx;
+  height: 50rpx;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 5rpx;
+  display: block;
+  text-align: center;
+  align-self: flex-end;
+  position: absolute;
+  right: 30rpx;
+}
+
+.rec-container {
+  margin: 20rpx;
 }

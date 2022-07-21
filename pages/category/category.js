@@ -1,4 +1,5 @@
-// pages/other/other.js
+// pages/category/category.js
+const app = getApp();
 Page({
 
   /**
@@ -12,7 +13,19 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
+    console.log(options)
+    console.log(options.category)
+    this.showCategory(options.category);
+  },
 
+  showCategory(category) {
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces?category=${category}`,
+      method: 'GET',
+      header,
+  })
   },
 
   /**

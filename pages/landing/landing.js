@@ -83,5 +83,19 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goToSpace(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../show/show?id=${id}`,
+    })
+  },
+
+  goToCategory(e) {
+    const category = e.currentTarget.dataset.category;
+    wx.navigateTo({
+      url: `../category/category?category=${category}`,
+    })
   }
 })
