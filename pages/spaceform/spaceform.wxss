@@ -4,6 +4,7 @@
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   border: 1rpx solid #c2bfbf;
   border-radius: 8rpx;
+  padding:10rpx;
 }
 
 .page-section-title{
@@ -80,4 +81,5 @@ image{
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   border-radius: 8rpx;
   text-align: center;
+  padding: 10rpx;
 }

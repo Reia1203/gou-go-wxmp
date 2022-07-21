@@ -1,0 +1,9 @@
+<!--pages/restaurants/restaurants.wxml-->
+<view class="container">
+    <view class="banner"></view>
+    <view style="text-align: center;">
+      <view class="title">Restaurants</view>
+    </view>
+ </view>
+  
+
