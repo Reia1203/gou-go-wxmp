@@ -1,21 +1,21 @@
 {
+
   "projectname": "gou-go-wxmp",
   "setting": {
-
-    "compileHotReLoad": false
-  },
-
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "compileHotReLoad": true,
     "urlCheck": false
   },
   "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
 
+
   "condition": {
     "miniprogram": {
       "list": [
         {
 
+          "name": "home",
+          "pathName": "pages/home/home",
 
           "name": "",
           "pathName": "pages/spaceform/spaceform",
@@ -50,6 +50,7 @@
           "pathName": "pages/stories/stories",
           "name": "landing",
           "pathName": "pages/landing/landing",
+
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -62,20 +63,24 @@
           "scene": null
         },
         {
-          "name": "home",
-          "pathName": "pages/home/home",
+          "name": "search",
+          "pathName": "pages/search/search",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "search",
-          "pathName": "pages/search/search",
+          "name": "spaceform",
+          "pathName": "pages/spaceform/spaceform",
           "query": "",
           "launchMode": "default",
           "scene": null
         }
       ]
     }
+  },
+  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "setting": {
+    "urlCheck": false
   }
 }

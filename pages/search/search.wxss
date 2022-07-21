@@ -1,0 +1,26 @@
+.page-section-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+
+.weui-input{
+  height: 66rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
+  border: 1rpx solid #c2bfbf;
+  border-radius: 8rpx;
+  margin: 20rpx;
+}
+
+.yellow-btn {
+  background-color: #F2DF3A;
+  width: 200rpx;
+  height: 100rpx;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 5rpx;
+  display: block;
+  text-align: center;
+  margin: 20rpx 0;
+}
