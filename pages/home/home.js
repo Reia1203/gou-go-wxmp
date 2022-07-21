@@ -17,24 +17,24 @@ Page({
     let header = wx.getStorageSync('header')
     console.log(header)
       // Get api data
-      wx.request({
-        url: `${app.globalData.baseUrl}/spaces`,
-        // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
-        method: 'GET',
-        header: header,
+      // wx.request({
+      //   url: `${app.globalData.baseUrl}/spaces`,
+      //   // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+      //   method: 'GET',
+      //   header: header,
         
-        success(res) {
-          console.log(res)
-          const {spaces} = res.data;
-          // const spaces = res.data.spaces
-          // Update local data
-          page.setData({
-            spaces
-          });
+      //   success(res) {
+      //     console.log(res)
+      //     const {spaces} = res.data;
+      //     // const spaces = res.data.spaces
+      //     // Update local data
+      //     page.setData({
+      //       spaces
+      //     });
   
-          wx.hideToast();
-        }
-      });
+      //     wx.hideToast();
+      //   }
+      // });
 
   },
 
@@ -95,10 +95,6 @@ Page({
 
 goToLanding () {
   wx.switchTab({
-    url: '../landing/landing',
-  })({
-    url: '../landing/landing',
-  })({
     url: '../landing/landing',
   })
 }

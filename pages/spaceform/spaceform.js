@@ -168,6 +168,8 @@ Page({
   },
 
   submit(e) {
+    console.log(e);
+    const id = e.currentTarget.dataset.id;
     const d = this.data
     let data = e.detail.value
     // multiindex:  [1, 0] 
@@ -178,17 +180,19 @@ Page({
     data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
     console.log(1111, data)
     getApp().globalData.spaces.push(data);
-  //   wx.request({
-  //     url:'http://localhost:3000/api/v1/spaces',
-  //     method:'POST',
-  //     data: data,
-  //     success(res){
-  //       console.log(res)
-  //       wx.navigateTo({
-  //         url: '../../pages/stories/stories',
-  //       })
-  //    }
-  //  })
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url:'http://localhost:3000/api/v1/spaces',
+      method:'POST',
+      header,
+      data: data,
+      success(res){
+        console.log(res)
+        wx.navigateTo({
+          url: `../show/show?id=${res.data.space.id}`,
+        })
+     }
+   })
 
 
 
