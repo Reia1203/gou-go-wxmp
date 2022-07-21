@@ -1,10 +1,11 @@
 // pages/spaceform/spaceform.js
+const app = getApp();
 Page({
 
 
   onShareAppMessage() {
     return {
-      title: 'checkbox',
+      title: 'features',
       path: 'page/component/pages/spaceform/spaceform'
     }
   },
@@ -13,79 +14,92 @@ Page({
    * 页面的初始数据
    */
   data: {
-    multiArray: [['Food', 'Bars','Cafes','Parks','Vets','Other'], ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai']],
-    objectMultiArray: [
-      [
-        {
-          id: 0,
-          name: 'Food'
-        },
-        {
-          id: 1,
-          name: 'Bars'
-        },
-        {
-          id: 2,
-          name: 'Cafes'
-        },
-        {
-          id: 3,
-          name: 'Parks'
-        },
-        {
-          id: 4,
-          name: 'Vets'
-        },
-        {
-          id: 5,
-          name: 'Other'
-        },
+    image_url:["../../image/placeholder.png"],
+    multiArray: [
+      ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
+      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai']
+    ],
+    // objectMultiArray: [
+    //   [
+    //     {
+    //       id: 0,
+    //       name: 'Food'
+    //     },
+    //     {
+    //       id: 1,
+    //       name: 'Bars'
+    //     },
+    //     {
+    //       id: 2,
+    //       name: 'Cafes'
+    //     },
+    //     {
+    //       id: 3,
+    //       name: 'Parks'
+    //     },
+    //     {
+    //       id: 4,
+    //       name: 'Vets'
+    //     },
+    //     {
+    //       id: 5,
+    //       name: 'Other'
+    //     },
 
-      ], [
-        {
-          id: 0,
-          name: 'American'
-        },
-        {
-          id: 1,
-          name: 'Buffet'
-        },
-        {
-          id: 2,
-          name: 'Chinese'
-        },
-        {
-          id: 3,
-          name: 'Fast Food'
-        },
-        {
-          id: 4,
-          name: 'French'
-        },
-        {
-          id: 5,
-          name: 'Italian'
-        },
-        {
-          id: 6,
-          name: 'Indian'
-        },
-        {
-          id: 7,
-          name: 'Japanese'
-        },
-        {
-          id: 8,
-          name: 'Korean'
-        },{
-          id: 9,
-          name: 'Mexcican'
-        },
-        {
-          id: 10,
-          name: 'Thai'
-        },
-      ]
+    //   ], [
+    //     {
+    //       id: 0,
+    //       name: 'American'
+    //     },
+    //     {
+    //       id: 1,
+    //       name: 'Buffet'
+    //     },
+    //     {
+    //       id: 2,
+    //       name: 'Chinese'
+    //     },
+    //     {
+    //       id: 3,
+    //       name: 'Fast Food'
+    //     },
+    //     {
+    //       id: 4,
+    //       name: 'French'
+    //     },
+    //     {
+    //       id: 5,
+    //       name: 'Italian'
+    //     },
+    //     {
+    //       id: 6,
+    //       name: 'Indian'
+    //     },
+    //     {
+    //       id: 7,
+    //       name: 'Japanese'
+    //     },
+    //     {
+    //       id: 8,
+    //       name: 'Korean'
+    //     },{
+    //       id: 9,
+    //       name: 'Mexcican'
+    //     },
+    //     {
+    //       id: 10,
+    //       name: 'Thai'
+    //     },
+       
+    //   ]
+    // ],
+    subCategoryArray: [
+      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai'],
+      ['All Bars'],
+      ['All Cafes'],
+      ['All Parks'],
+      ['All Vets'],
+      ['Other']
     ],
     multiIndex: [0, 0],
   },
@@ -154,14 +168,30 @@ Page({
   },
 
   submit(e) {
+    const d = this.data
     let data = e.detail.value
-    data.categories = this.data.multiIndex
+    // multiindex:  [1, 0] 
+    // data.categories = d.multiIndex
+    // multiArray = [restaurant bars], [american chinese ...]
+    data.category = d.multiArray[0][d.multiIndex[0]]
+    // subCategory = [american, buffet, chines...], [all bars], [all cafes]
+    data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
     console.log(1111, data)
     getApp().globalData.spaces.push(data);
-    // wx.navigateTo({
-    //   url: '/pages/stories/stories',
-    // })
-    // console.log(e)
+  //   wx.request({
+  //     url:'http://localhost:3000/api/v1/spaces',
+  //     method:'POST',
+  //     data: data,
+  //     success(res){
+  //       console.log(res)
+  //       wx.navigateTo({
+  //         url: '../../pages/stories/stories',
+  //       })
+  //    }
+  //  })
+
+
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -217,5 +247,23 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  uploadImage(){
+    let that = this
+    wx.chooseMedia({
+      count: 9,
+      mediaType:['image','video'],
+      sourceType:['album','camera'],
+      maxDuration:30,
+      camera: 'back',
+      success:(res)=>{
+        console.log(res.tempFiles[0].tempFilePath);
+        that.setData({
+          // image_url: that.data.image_url.concat(res.tempFiles[0].tempFilePath)
+          image_url: [res.tempFiles[0].tempFilePath]
+        })
+      }
+    })
   }
 })

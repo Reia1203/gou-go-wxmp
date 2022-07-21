@@ -11,7 +11,6 @@
     "pages/picker/picker",
     "pages/textarea/textarea",
     "pages/stories/stories"
-    "index/index"
   ],
   "usingComponents": {
     "navbar": "/components/navbar"
@@ -32,6 +31,11 @@
         "pagePath": "pages/landing/landing",
         "iconPath": "image/home.png",
         "selectedIconPath": "image/home.png"
+      },
+      {
+        "pagePath": "pages/spaceform/spaceform",
+        "iconPath": "image/plus.png",
+        "selectedIconPath": "image/plus.png"
       },
       {
         "pagePath": "pages/search/search",

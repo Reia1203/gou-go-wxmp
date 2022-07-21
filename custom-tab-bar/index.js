@@ -14,12 +14,12 @@ Component({
       selectedIconPath: "/image/search.png",
       text: "SEARCH"
     }, {
-      pagePath: "pages/add/add",
+      pagePath: "../spaceform/spaceform",
       iconPath: "/image/plus.png",
       selectedIconPath: "/image/plus.png",
       text: "ADD"
     }, {
-      pagePath: "/user/user",
+      pagePath: "../user/user",
       iconPath: "/image/user.png",
       selectedIconPath: "/image/user.png",
       text: "ME"
