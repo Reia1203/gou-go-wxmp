@@ -4,7 +4,11 @@
     "compileHotReLoad": false,
     "urlCheck": false
   },
-  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+
+
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+
+
   "condition": {
     "miniprogram": {
       "list": [
@@ -72,6 +76,7 @@
           "scene": null
         },
         {
+<<<<<<< HEAD
           "name": "show",
           "pathName": "pages/show/show",
           "query": "id=1",
@@ -81,7 +86,32 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
+=======
+          "name": "show",
+          "pathName": "pages/show/show",
+          "query": "id=9",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "show",
+          "pathName": "pages/show/show",
+>>>>>>> 76df4b7459a5f4b0ba2fa4577e6e2a4490ef7503
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/review/review",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "category",
+          "pathName": "pages/category/category",
+          "query": "category=restaurant",
           "launchMode": "default",
           "scene": null
         }

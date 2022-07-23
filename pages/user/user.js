@@ -1,10 +1,12 @@
 // pages/user/user.js
+const app = getApp();
 Page({
 
   /**
    * Page initial data
    */
   data: {
+    tabbarPage: true,
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
@@ -15,6 +17,28 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+
+ 
+    let page = this;
+    let header = wx.getStorageSync('header')
+    let user_id = wx.getStorageSync('user').id
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${user_id}/profile`,
+      method: 'GET',
+      header: header,
+      
+      success(res) {
+        console.log(res)
+        const {spaces} = res.data;
+        // const spaces = res.data.spaces
+        // Update local data
+        page.setData({
+          spaces
+        });
+
+        wx.hideToast();
+      }
+    });
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
@@ -28,7 +52,9 @@ Page({
         })
       }
     })
-  },
+  }
+  
+  ,
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
     this.setData({
@@ -48,7 +74,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-
+    const tabbar = this.getTabBar()
+    console.log('tabbar data', tabbar.data)
+    tabbar.setData({selected: 3})
   },
 
   /**

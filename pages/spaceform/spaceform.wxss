@@ -36,9 +36,11 @@
 }
 
 .page-section-title{
+  display: flex;
   font-weight: bold;
   color:#706c6c;
   font-size: 35rpx;
+  justify-content: space-between;
 }
 
 .h1 {
@@ -87,6 +89,10 @@ image{
   font-size: 32rpx;
 }
 
+.mb {
+  margin-bottom: 30rpx;
+}
+
 .picker{
   border: 1rpx solid #c2bfbf;
   height: 66rpx;
@@ -94,4 +100,31 @@ image{
   border-radius: 8rpx;
   text-align: center;
   padding: 10rpx;
+
+}
+
+.map-icon {
+  width: 50rpx !important;
+}
+
+.bottom-margin {
+  height: 80rpx;
+}
+
+.top-margin {
+  height: 200rpx;
+
+  display: flex; align-items: center; justify-content: center;
+}
+
+checkbox {
+  margin-right: 15rpx;
+}
+
+.choice{
+  /* display: flex;
+  justify-content: space-evenly;  */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
 }

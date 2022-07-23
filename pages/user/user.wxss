@@ -55,3 +55,11 @@
   text-align: center;
   margin: 20rpx 0;
 }
+
+.bottom-margin {
+  height: 230rpx;
+}
+
+.top-margin {
+  height: 200rpx;
+}

@@ -1,4 +1,5 @@
 <navbar />
+<view class="top-margin"> </view>
 
 <image src="/image/dogs_brunch.png" class="hero-img" mode="aspectFit"></image>
 
@@ -9,3 +10,5 @@
   <text class="home-small">Use Gou-Go to keep your dog on the go!</text>
   <text class="home-btn" bindtap="goToLanding">Browse Locations ></text>
 </view>
+
+<view class="bottom-margin"> </view>

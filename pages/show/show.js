@@ -16,6 +16,29 @@ Page({
     console.log(options)
     console.log(options.id)
     this.getSpace(options.id);
+
+    console.log(options)
+    let page = this;
+    let header = wx.getStorageSync('header')
+    // wx.request({
+    //   url: `${app.globalData.baseUrl}/spaces`,
+    //   // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+    //   method: 'GET',
+    //   header: header,
+      
+    //   success(res) {
+    //     console.log(res)
+    //     const {space} = res.data;
+        
+    //     // const spaces = res.data.spaces
+    //     // Update local data
+    //     page.setData({
+    //       space
+    //     });
+
+    //     wx.hideToast();
+    //   }
+    // });
   },
 
   getSpace(id) {
@@ -78,5 +101,19 @@ Page({
    */
   onShareAppMessage() {
 
+  }, 
+
+  favorite_toggle(e) {
+    const id = this.data.space.id
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces/${id}/toggle_favorite`,
+      method: 'POST',
+      header,
+      success(res) {
+        page.setData(res.data)
+      }
+    })
   }
 })

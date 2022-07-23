@@ -14,10 +14,20 @@ Component({
 
   },
 
+  attached() {
+    this.setData({tabbarPage: getCurrentPages().pop().data.tabbarPage})
+   
+  },
+
   /**
    * Component methods
    */
   methods: {
+    navigateBack() {
+      wx.navigateBack( {
+        delta: 1
+      })
+    }
+  }, 
 
-  }
 })
