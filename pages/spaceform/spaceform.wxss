@@ -95,3 +95,15 @@ image{
   text-align: center;
   padding: 10rpx;
 }
+
+.map-icon {
+  width: 50rpx !important;
+}
+
+.bottom-margin {
+  height: 80rpx;
+}
+
+.top-margin {
+  height: 200rpx;
+}

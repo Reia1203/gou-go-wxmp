@@ -1,31 +1,32 @@
 <navbar />
+<view class="top-margin"> </view>
 
 <view class="category-container">
 <view class="row-container">
   <view class="paw-container" bindtap="goToCategory" data-category="restaurant">
-    <image src="/image/paw1.png" class="paw-icon" mode="aspectFit"  />
+    <image src="/image/restaurant.svg" class="paw-icon" mode="aspectFit"  />
     <text>FOOD</text>
   </view>
   <view class="paw-container" bindtap="goToCategory" data-category="bar" >
-    <image src="/image/paw2.png" class="paw-icon" mode="aspectFit"  />
+    <image src="/image/cocktail.svg" class="paw-icon" mode="aspectFit"  />
     <text>BARS</text>
   </view>
   <view class="paw-container" bindtap="goToCategory" data-category="cafe">
-    <image src="/image/paw3.png" class="paw-icon" mode="aspectFit" />
+    <image src="/image/coffee.svg" class="paw-icon" mode="aspectFit" />
     <text>CAFES</text>
   </view>
 </view>
 <view class="row-container">
   <view class="paw-container" bindtap="goToCategory" data-category="park">
-    <image src="/image/paw4.png" class="paw-icon" mode="aspectFit"/>
+    <image src="/image/tree.svg" class="paw-icon" mode="aspectFit"/>
     <text>PARKS</text>
   </view>
   <view class="paw-container" bindtap="goToCategory" data-category="vet">
-    <image src="/image/paw5.png" class="paw-icon" mode="aspectFit"/>
+    <image src="/image/doctor-15.svg" class="paw-icon" mode="aspectFit"/>
     <text>VETS</text>
   </view>
   <view class="paw-container" bindtap="goToCategory" data-category="other">
-    <image src="/image/paw6.png" class="paw-icon" mode="aspectFit"/>
+    <image src="/image/paw.svg" class="paw-icon" mode="aspectFit"/>
     <text>OTHER</text>
   </view>
 </view>
@@ -41,3 +42,5 @@
     <view class="p">{{space.features}}</view>
 </view>
 </view>
+
+<view class="bottom-margin"> </view>

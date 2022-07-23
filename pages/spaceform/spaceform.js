@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabbarPage: true,
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
@@ -178,17 +179,17 @@ Page({
     data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
     console.log(1111, data)
     getApp().globalData.spaces.push(data);
-  //   wx.request({
-  //     url:'http://localhost:3000/api/v1/spaces',
-  //     method:'POST',
-  //     data: data,
-  //     success(res){
-  //       console.log(res)
-  //       wx.navigateTo({
-  //         url: '../../pages/stories/stories',
-  //       })
-  //    }
-  //  })
+    wx.request({
+      url:'http://localhost:3000/api/v1/spaces',
+      method:'POST',
+      data: data,
+      success(res){
+        console.log(res)
+        wx.navigateTo({
+          url: '../../pages/show/show',
+        })
+     }
+   })
 
 
 
@@ -211,7 +212,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    const tabbar = this.getTabBar()
+    console.log('tabbar data', tabbar.data)
+    tabbar.setData({selected: 2})
   },
 
   /**

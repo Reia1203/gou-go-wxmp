@@ -5,8 +5,9 @@ Page({
   /**
    * Page initial data
    */
+  
   data: {
-
+    tabbarPage: true
   },
 
   /**
@@ -47,7 +48,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-
+    const tabbar = this.getTabBar()
+    console.log('tabbar data', tabbar.data)
+    tabbar.setData({selected: 0})
   },
 
   /**

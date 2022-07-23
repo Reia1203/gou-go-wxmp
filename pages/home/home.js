@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    tabbarPage: true
   },
 
   /**
@@ -95,10 +95,6 @@ Page({
 
 goToLanding () {
   wx.switchTab({
-    url: '../landing/landing',
-  })({
-    url: '../landing/landing',
-  })({
     url: '../landing/landing',
   })
 }

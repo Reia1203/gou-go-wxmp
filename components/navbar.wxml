@@ -1,5 +1,14 @@
 <!--components/navbar.wxml-->
 <view class="navbar">
-  <view>GOU-GO</view>
-  <image src="/image/gougo.png" class="show-img" mode="aspectFit"/>
+  <view wx:if="{{tabbarPage === false || tabbarPage === nil}}">
+  <image src="/image/chevron-left.svg" class = "back-btn" bindtap="navigateBack"></image>
+  </view>
+  <view wx:if="{{tabbarPage === true }}" class = "back-btn">
+  
+  </view>
+
+  <view class="brand-container">
+    <view class="brand">GOU-GO</view>
+    <image src="/image/gougo.png" class="show-img" mode="aspectFit"/>
+  </view>
 </view>
