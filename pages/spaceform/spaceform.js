@@ -14,7 +14,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+
     tabbarPage: true,
+
+    address:'',
+
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
@@ -125,6 +129,19 @@ Page({
       items
     })
   },
+ toPosition: function(e){
+  let page = this;
+   wx.chooseLocation({
+     success(res){
+       console.log(res)
+       if(res.address!=''){
+         page.setData({
+           address:res.address
+          })
+       }
+     }
+   })
+ },
 
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -169,24 +186,45 @@ Page({
   },
 
   submit(e) {
+    console.log(e);
+    const url = app.globalData.baseUrl;
+    let page = this;
+    const id = e.currentTarget.dataset.id;
     const d = this.data
     let data = e.detail.value
     // multiindex:  [1, 0] 
     // data.categories = d.multiIndex
     // multiArray = [restaurant bars], [american chinese ...]
     data.category = d.multiArray[0][d.multiIndex[0]]
-    // subCategory = [american, buffet, chines...], [all bars], [all cafes]
+    // subCategory = [american, buffet, chines...] , [all bars], [all cafes]
     data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
     console.log(1111, data)
     getApp().globalData.spaces.push(data);
+
+    let header = wx.getStorageSync('header')
     wx.request({
-      url:'http://localhost:3000/api/v1/spaces',
+      
+      url: `${app.globalData.baseUrl}/spaces`,
       method:'POST',
+      header,
       data: data,
       success(res){
         console.log(res)
+        wx.uploadFile({
+          url: `${url}/spaces/${res.data.space.id}/upload`,
+          filePath: page.data.image_url[0],
+          name: 'file',
+          header: header,
+          success(res) {
+            console.log('this is for upload file', res)
+          },
+          fail(err) {
+            console
+            console.log(err)
+          }
+        })
         wx.navigateTo({
-          url: '../../pages/show/show',
+          url: `../show/show?id=${res.data.space.id}`,
         })
      }
    })
