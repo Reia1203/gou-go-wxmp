@@ -14,7 +14,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    tabbarPage: true,
+
     address:'',
+
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
@@ -196,6 +200,7 @@ Page({
     data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
     console.log(1111, data)
     getApp().globalData.spaces.push(data);
+
     let header = wx.getStorageSync('header')
     wx.request({
       
@@ -245,7 +250,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    const tabbar = this.getTabBar()
+    console.log('tabbar data', tabbar.data)
+    tabbar.setData({selected: 2})
   },
 
   /**

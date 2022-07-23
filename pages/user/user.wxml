@@ -1,4 +1,6 @@
 <navbar />
+
+<view class="top-margin"> </view>
 <view class="container">
   <view class="userinfo">
     <!-- <block wx:if="{{!hasUserInfo}}">
@@ -28,5 +30,7 @@
     <text class="yellow-btn">See More</text>
   </view>
 </view>
+
+<view class="bottom-margin"> </view>
 
 

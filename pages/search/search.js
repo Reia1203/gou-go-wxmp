@@ -1,11 +1,12 @@
 // pages/search/search.js
+const app = getApp();
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    tabbarPage: true
   },
 
   /**
@@ -26,7 +27,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-
+    const tabbar = this.getTabBar()
+    // console.log('tabbar data', tabbar.data)
+    tabbar.setData({selected: 1})
   },
 
   /**
@@ -62,5 +65,37 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  submit(e) {
+    // console.log(e)
+    const search = e.detail.value.search
+    console.log(search)
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces?search=${search}`,
+      method: 'GET',
+      header,
+      success(res) {
+        console.log(res)
+        const {spaces} = res.data;
+        // const spaces = res.data.spaces
+        // Update local data
+        page.setData({
+          spaces
+        });
+
+        wx.hideToast();
+      }
+  })
+
+  },
+
+  goToSpace(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../show/show?id=${id}`,
+    })
   }
 })

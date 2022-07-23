@@ -2,6 +2,8 @@
 <!--pages/post/post.wxml-->
 
 <navbar />
+
+<view class="top-margin"> </view>
 <view class="container-form">
   <view class="contain">
         <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
@@ -57,3 +59,5 @@
       <button form-type="submit" class="btn-flat">Save</button>
     </form>
 </view>
+
+<view class="bottom-margin"> </view>

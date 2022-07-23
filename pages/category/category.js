@@ -25,6 +25,17 @@ Page({
       url: `${app.globalData.baseUrl}/spaces?category=${category}`,
       method: 'GET',
       header,
+      success(res) {
+        console.log(res)
+        const {spaces} = res.data;
+        // const spaces = res.data.spaces
+        // Update local data
+        page.setData({
+          spaces
+        });
+
+        wx.hideToast();
+      }
   })
   },
 
@@ -75,5 +86,11 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  goToSpace(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../show/show?id=${id}`,
+    })
   }
 })

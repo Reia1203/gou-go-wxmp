@@ -36,3 +36,11 @@
   font-weight: bold;
   border-radius: 5rpx;
 }
+
+.bottom-margin {
+  height: 230rpx;
+}
+
+.top-margin {
+  height: 200rpx;
+}

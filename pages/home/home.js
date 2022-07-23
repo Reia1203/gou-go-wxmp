@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    tabbarPage: true
   },
 
   /**

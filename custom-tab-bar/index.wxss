@@ -3,10 +3,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 70px;
   background: #3AB4F2;
   display: flex;
-  padding-bottom: env(safe-area-inset-bottom);
+  align-items: center;
+  margin-right: 20rpx; margin-left: 20rpx;
+  border-radius: 35px;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.4);
+  margin-bottom: env(safe-area-inset-bottom);
 }
 
 /* .tab-bar-border {
@@ -28,9 +32,9 @@
   flex-direction: column;
 }
 
-.tab-bar-item cover-image {
-  width: 27px;
-  height: 27px;
+.tab-bar-item image {
+  width: 35px;
+  height: 35px;
 }
 
 

@@ -1,7 +1,17 @@
 <navbar />
 
+<view class="top-margin"> </view>
+
 <view class="space-container">
-  <image src="{{space.image}}" mode="aspectFill"></image>
+  <view class="favorite-container"> 
+    <image src="{{space.image}}" mode="aspectFill"></image>
+    <view wx:if="{{space.favorited === true}}" class="heart-icon" bindtap="favorite_toggle">
+    <image src="/image/heart-fill.svg" ></image>
+    </view>
+    <view wx:if="{{space.favorited === false}}" class="heart-icon">
+    <image src="/image/heart.svg" bindtap="favorite_toggle" ></image>
+    </view>
+  </view>
   <view class="space-info">
     <view>
         <text class="bold-font">{{space.name}}</text>
@@ -12,7 +22,7 @@
         <text class="space-text">{{space.features}}</text>
       </view>
     </view>
-    <text class="yellow-btn">Map</text>
+    <image src="/image/map.svg" class="map-icon"></image>
 </view>
 
 </view>
@@ -28,7 +38,19 @@
 
 <view class="rec-container">
   <text class="bold-font">Other Recommendations</text>
+
+<view wx:for="{{space.recommended_spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  </image>
+  <view class="card-product-infos">
+    <view class="h2">{{space.name}}</view>
+    <view class="p">{{space.access}}</view>
+    <view class="p">{{space.features}}</view>
 </view>
+</view>
+</view>
+
+<view class="bottom-margin"> </view>
 
 
 
