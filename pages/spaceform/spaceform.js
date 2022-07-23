@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    address:'',
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
@@ -124,6 +125,19 @@ Page({
       items
     })
   },
+ toPosition: function(e){
+  let page = this;
+   wx.chooseLocation({
+     success(res){
+       console.log(res)
+       if(res.address!=''){
+         page.setData({
+           address:res.address
+          })
+       }
+     }
+   })
+ },
 
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
