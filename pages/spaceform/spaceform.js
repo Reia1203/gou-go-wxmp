@@ -212,15 +212,23 @@ Page({
           header: header,
           success(res) {
             console.log('this is for upload file', res)
+            wx.showModal({
+              showCancel: false,
+              title: 'Thank you',
+              content: 'Your submission is under review.',
+              success(res) {
+                wx.switchTab({
+                  url: `../landing/landing`,
+                })
+              }
+            })
           },
           fail(err) {
             console
             console.log(err)
           }
         })
-        wx.navigateTo({
-          url: `../show/show?id=${res.data.space.id}`,
-        })
+        
      }
    })
 
