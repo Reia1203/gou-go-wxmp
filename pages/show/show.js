@@ -20,25 +20,25 @@ Page({
     console.log(options)
     let page = this;
     let header = wx.getStorageSync('header')
-    wx.request({
-      url: `${app.globalData.baseUrl}/spaces`,
-      // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
-      method: 'GET',
-      header: header,
+    // wx.request({
+    //   url: `${app.globalData.baseUrl}/spaces`,
+    //   // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
+    //   method: 'GET',
+    //   header: header,
       
-      success(res) {
-        console.log(res)
-        const {space} = res.data;
+    //   success(res) {
+    //     console.log(res)
+    //     const {space} = res.data;
         
-        // const spaces = res.data.spaces
-        // Update local data
-        page.setData({
-          space
-        });
+    //     // const spaces = res.data.spaces
+    //     // Update local data
+    //     page.setData({
+    //       space
+    //     });
 
-        wx.hideToast();
-      }
-    });
+    //     wx.hideToast();
+    //   }
+    // });
   },
 
   getSpace(id) {
