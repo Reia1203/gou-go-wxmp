@@ -19,26 +19,7 @@ Page({
     }
 
  
-    let page = this;
-    let header = wx.getStorageSync('header')
-    let user_id = wx.getStorageSync('user').id
-    wx.request({
-      url: `${app.globalData.baseUrl}/users/${user_id}/profile`,
-      method: 'GET',
-      header: header,
-      
-      success(res) {
-        console.log(res)
-        const {spaces} = res.data;
-        // const spaces = res.data.spaces
-        // Update local data
-        page.setData({
-          spaces
-        });
-
-        wx.hideToast();
-      }
-    });
+    
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
@@ -77,6 +58,26 @@ Page({
     const tabbar = this.getTabBar()
     console.log('tabbar data', tabbar.data)
     tabbar.setData({selected: 3})
+    let page = this;
+    let header = wx.getStorageSync('header')
+    let user_id = wx.getStorageSync('user').id
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${user_id}/profile`,
+      method: 'GET',
+      header: header,
+      
+      success(res) {
+        console.log(res)
+        const {spaces} = res.data;
+        // const spaces = res.data.spaces
+        // Update local data
+        page.setData({
+          spaces
+        });
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**
@@ -112,5 +113,11 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+  goToSpace(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../show/show?id=${id}`,
+    })
+  },
 })
