@@ -38,8 +38,8 @@
   </image>
   <view class="card-product-infos">
     <view class="h2">{{space.name}}</view>
-    <view class="p">{{space.access}}</view>
-    <view class="p">{{space.features}}</view>
+    <view class="p">Dogs Allowed: {{space.access}}</view>
+    <!-- <view class="p">{{space.features}}</view> -->
 </view>
 </view>
 

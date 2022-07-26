@@ -22,17 +22,17 @@
         <text class="space-text">{{space.features}}</text>
       </view>
     </view>
-    <image src="/image/map.svg" class="map-icon"></image>
+    <!-- <image src="/image/map.svg" class="map-icon"></image> -->
 </view>
 
 </view>
 
-<text class="horizontal-line"></text>
+<!-- <text class="horizontal-line"></text>
 
 <view class="review-container">
   <text class="bold-font">Reviews</text>
   <text class="review-btn">Read More</text>
-</view>
+</view> -->
 
 <text class="horizontal-line"></text>
 

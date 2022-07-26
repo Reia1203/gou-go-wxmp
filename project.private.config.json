@@ -74,6 +74,13 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "show",
+          "pathName": "pages/show/show",
           "query": "id=9",
           "launchMode": "default",
           "scene": null

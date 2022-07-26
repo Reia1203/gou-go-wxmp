@@ -68,7 +68,8 @@
 }
 
 .card-product .card-product-infos {
-  padding: 38rpx;
+  padding: 20rpx;
+  width: 350rpx;
 }
 
 .bottom-margin {

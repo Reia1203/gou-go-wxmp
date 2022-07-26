@@ -15,19 +15,30 @@
     <!-- </block> -->
   </view>
 
-  <view class="add-space">
+  <!-- <view class="add-space">
     <text>Add a location </text>
     <image src="/image/plus_black.png" class="icon"></image>
-  </view>
+  </view> -->
 
-  <view class="review-container">
+<!-- Review Container -->
+  <!-- <view class="review-container">
     <text class="bold-text">My Reviews</text>
     <text class="yellow-btn">Read More</text>
-  </view>
+  </view> -->
 
-  <view class="favorites-container">
-    <text class="bold-text">My Favorite Places</text>
-    <text class="yellow-btn">See More</text>
+
+<text class="bold-text">My Favorite Places</text>
+<view class="favorites-container">
+      <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+    <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+    </image>
+    <view class="card-product-infos">
+      <view class="h2">{{space.name}}</view>
+      <view class="p">{{space.access}}</view>
+      <view class="p">{{space.features}}</view>
+  </view>
+  </view>
+    <!-- <text class="yellow-btn">See More</text> -->
   </view>
 </view>
 
