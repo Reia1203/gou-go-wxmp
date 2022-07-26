@@ -33,7 +33,7 @@ App({
   globalData: {
     userInfo: null,
     spaces: [],
-
+    reviews:[],
     header: null,
     user: null,
 

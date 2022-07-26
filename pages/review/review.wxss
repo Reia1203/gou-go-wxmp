@@ -3,6 +3,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 40rpx;
 }
 
 .card-trip > image {
@@ -44,4 +45,8 @@
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   border: 1rpx solid black;
   border-radius: 8rpx;
+}
+
+.top-margin{
+  height: 210rpx;
 }
