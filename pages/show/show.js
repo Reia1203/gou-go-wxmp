@@ -115,5 +115,12 @@ Page({
         page.setData(res.data)
       }
     })
+  }, 
+
+  goToSpace(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../show/show?id=${id}`,
+    })
   }
 })
