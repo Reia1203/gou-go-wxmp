@@ -79,3 +79,13 @@
 .top-margin {
   height: 200rpx;
 }
+
+.lead-text {
+  font-size: larger;
+  font-weight: bolder;
+  display: flex;
+  text-align: center;
+  align-items: ;
+  width: 500rpx;
+  margin: 30rpx auto;
+}

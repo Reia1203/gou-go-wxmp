@@ -1,7 +1,7 @@
 <navbar />
 <view class="top-margin"> </view>
 
-<view class="category-container">
+<!-- <view class="category-container">
 <view class="row-container">
   <view class="paw-container" bindtap="goToCategory" data-category="restaurant">
     <image src="/image/restaurant.svg" class="paw-icon" mode="aspectFit"  />
@@ -30,9 +30,9 @@
     <text>OTHER</text>
   </view>
 </view>
-</view>
+</view> -->
 
-
+<text class="lead-text">Dog-Friendly Public Parks:</text>
 <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
   <image src="{{ space.image }}" class="space-img" mode="aspectFill">
   </image>

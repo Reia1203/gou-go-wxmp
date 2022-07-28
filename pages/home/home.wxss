@@ -42,5 +42,5 @@
 }
 
 .top-margin {
-  height: 200rpx;
+  height: 120rpx;
 }

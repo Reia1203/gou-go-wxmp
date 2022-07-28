@@ -4,7 +4,7 @@
       
         <view class="page-section-title">Search Gou-Go</view>
         <view class="search-container">
-          <input class="weui-input" type="search" name="search" placeholder="Ex: Charlies" />
+          <input class="weui-input" type="search" name="search" placeholder="Ex: West Bund" />
           <button class="search-button" form-type="submit">
             <image src="/image/search-select.png"></image>
           </button>
