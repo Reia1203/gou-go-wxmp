@@ -22,7 +22,7 @@
         <text class="space-text">{{space.features}}</text>
       </view>
     </view>
-    <!-- <image src="/image/map.svg" class="map-icon"></image> -->
+    <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
 </view>
 
 </view>
