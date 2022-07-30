@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    image_url:["../../image/placeholder.png"],
   },
 
   /**
@@ -62,5 +62,24 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  uploadImage(){
+    let that = this
+    wx.chooseMedia({
+      count: 9,
+      mediaType:['image','video'],
+      sourceType:['album','camera'],
+      maxDuration:30,
+      camera: 'back',
+      success:(res)=>{
+        console.log(res.tempFiles[0].tempFilePath);
+        that.setData({
+          // image_url: that.data.image_url.concat(res.tempFiles[0].tempFilePath)
+          image_url: [res.tempFiles[0].tempFilePath]
+        })
+      }
+    })
   }
+
 })

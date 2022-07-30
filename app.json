@@ -1,36 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/landing/landing",
     "pages/user/user",
     "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/show/show" ,
+    "pages/show/show",
     "pages/category/category",
     "pages/spaceform/spaceform",
     "pages/review/review",
     "pages/picker/picker",
     "pages/textarea/textarea",
-    "pages/stories/stories"
+    "pages/stories/stories",
+    "pages/map/map"
   ],
-
-"requiredPrivateInfos": [
-  "getLocation",
-  "chooseLocation"
-],
-
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
   "usingComponents": {
     "navbar": "/components/navbar"
   },
-  "window":{
+  "window": {
     "navigationStyle": "custom",
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-
+  "permission": {
+    "scope.userLocation": {
+      "desc": "导航需要" 
+    }
+  },
   "tabBar": {
     "custom": true,
     "borderStyle": "black",
@@ -59,6 +62,5 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
-
   
 }

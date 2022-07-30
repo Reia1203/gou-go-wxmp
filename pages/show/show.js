@@ -122,5 +122,23 @@ Page({
     wx.navigateTo({
       url: `../show/show?id=${id}`,
     })
+  },
+  goToMap(e) {
+    // const id = e.currentTarget.dataset.id;
+    const { space } = this.data
+    wx.getLocation({ //获取当前经纬度
+      type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
+      success: function (res) {
+        wx.openLocation({ //​使用微信内置地图查看位置。
+          latitude: space.latitude, //要去的纬度-地址
+          longitude: space.longitude, //要去的经度-地址
+          name: space.name,
+          address: space.address
+        })
+      }
+    })
+    // wx.navigateTo({
+    //   url: `../map/map?id=${id}`,
+    // })
   }
 })

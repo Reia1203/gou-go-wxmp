@@ -22,6 +22,7 @@
 }
 .brand {
   color: white !important;
+  font-family: 'Pacifico-Regular';
 }
 
 .back-btn {
