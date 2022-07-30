@@ -18,8 +18,8 @@
         <text class="space-text">{{space.address}}</text>
       <view class="features-text">
         <text class="space-text">{{space.category}}</text>
-        <text class="space-text">{{space.access}}</text>
-        <text class="space-text">{{space.features}}</text>
+        <text class="space-text">Dog's allowed: {{space.access}}</text>
+        <!-- <text class="space-text">{{space.features}}</text> -->
       </view>
     </view>
     <!-- <image src="/image/map.svg" class="map-icon"></image> -->

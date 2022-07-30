@@ -3,17 +3,21 @@
 <view class="top-margin"> </view>
 <view class="container">
   <view class="userinfo">
-    <!-- <block wx:if="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Show my profile </button>
-      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Show my profile info </button>
-    </block> -->
-    <!-- <block wx:else> -->
-      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
-      <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
-      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+    <block wx:if="{{!hasUserInfo}}">
+      <image class="userinfo-avatar" src="/image/avatar.svg"></image>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button>
+    </block> 
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    <!-- </block> -->
+
+    </block>
   </view>
+
+  <!-- <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+      
 
   <!-- <view class="add-space">
     <text>Add a location </text>

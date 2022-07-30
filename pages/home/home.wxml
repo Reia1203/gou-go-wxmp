@@ -9,6 +9,6 @@
   <text class="home-bold">Looking for dog-friendly places in Shanghai?</text>
   <text class="home-small">Use Gou-Go to keep your dog on the go!</text>
   <text class="home-btn" bindtap="goToLanding">Browse Locations ></text>
-</view>
 
+</view>
 <view class="bottom-margin"> </view>

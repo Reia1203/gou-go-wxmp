@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   color: black;
+  height: 300rpx;
 }
 
 .userinfo-avatar {
@@ -115,4 +116,10 @@
 
 .top-margin {
   height: 200rpx;
+}
+
+button {
+  background-color: #0078AA;
+  color: white;
+  width: 250rpx !important;
 }
