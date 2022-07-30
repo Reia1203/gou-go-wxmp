@@ -18,6 +18,7 @@
         <text class="space-text" >{{space.address}}</text>
       <view class="features-text">
         <text class="space-text">{{space.category}}</text>
+
         <text class="space-text">Dogs allowed: {{space.access}}</text>
         <!-- <text class="space-text">{{space.features}}</text> -->
       </view>
