@@ -12,3 +12,34 @@
 text, view{
   color: #515151;
 }
+@font-face {
+  font-family: 'Pacifico-Regular';
+  src: url(https://lira-random-bucket.oss-cn-shanghai.aliyuncs.com/fonts/Pacifico-Regular.ttf);
+  font-weight: regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(https://lira-random-bucket.oss-cn-shanghai.aliyuncs.com/fonts/Raleway-Regular.ttf);
+  font-weight: regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(https://lira-random-bucket.oss-cn-shanghai.aliyuncs.com/fonts/Raleway-Italic.ttf);
+  font-weight: regular;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(https://lira-random-bucket.oss-cn-shanghai.aliyuncs.com/fonts/Raleway-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+page {
+  font-family: 'Raleway', sans-serif;
+}

@@ -1,5 +1,8 @@
 <!--pages/review/review.wxml-->
 <navbar />
+<view class="top-margin"></view>
+
+
 <view class="card-trip">
   <image src="https://img0.baidu.com/it/u=637877736,215032142&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=496" />
   <view class="card-trip-infos">
@@ -14,12 +17,20 @@
   
 </view>
 
-<view>Review</view>
-<view class="section">
-  <textarea class="textarea" placeholder="Tell others more about this space!" auto-focus />
+<view class="container">
+
+  <view class="h2">Review</view>
+  <view class="section">
+    <textarea class="textarea" placeholder="Tell me more about this space!" auto-focus />
+  </view>
+
+  <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
+        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
+  </view>
+  
+ 
+
+  <view>Rating</view>
+  <button form-type="submit" class="btn-flat">Save</button>
 </view>
-
-<button bindtap="uploadImage" class="btn-red">Upload Image</button>
-
-<view>Rating</view>
-<button form-type="submit" class="btn-flat">Save</button>
