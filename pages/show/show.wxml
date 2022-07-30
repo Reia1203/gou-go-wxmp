@@ -15,11 +15,11 @@
   <view class="space-info">
     <view>
         <text class="bold-font">{{space.name}}</text>
-        <text class="space-text">{{space.address}}</text>
+        <text class="space-text" >{{space.address}}</text>
       <view class="features-text">
         <text class="space-text">{{space.category}}</text>
-        <text class="space-text">{{space.access}}</text>
-        <text class="space-text">{{space.features}}</text>
+        <text class="space-text">Dogs allowed: {{space.access}}</text>
+        <!-- <text class="space-text">{{space.features}}</text> -->
       </view>
     </view>
     <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
@@ -45,7 +45,7 @@
   <view class="card-product-infos">
     <view class="h2">{{space.name}}</view>
     <view class="p">{{space.access}}</view>
-    <view class="p">{{space.features}}</view>
+    <!-- <view class="p">{{space.features}}</view> -->
 </view>
 </view>
 </view>
