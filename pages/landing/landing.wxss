@@ -18,9 +18,9 @@
 }
 
 .paw-icon {
-  height: 150rpx;
-  width: 150rpx;
-  margin: 20rpx 40rpx;
+  height: 100rpx;
+  width: 100rpx;
+  margin: 30rpx 65rpx;
 }
 
 .card {
@@ -78,4 +78,10 @@
 
 .top-margin {
   height: 200rpx;
+}
+
+.row-container text{
+  font-size: 30rpx;
+  font-family:'Raleway';
+  font-weight: bold;
 }
