@@ -35,7 +35,7 @@
     <view class="card-product-infos">
       <view class="h2">{{space.name}}</view>
       <view class="p">{{space.access}}</view>
-      <view class="p">{{space.features}}</view>
+      <!-- <view class="p">{{space.features}}</view> -->
   </view>
   </view>
     <!-- <text class="yellow-btn">See More</text> -->
