@@ -1,11 +1,12 @@
 /* pages/review/review.wxss */
-.card-trip {
+/* .card-trip {
   overflow: hidden;
   background: white;
+  border-bottom: 1px solid #9E9E9E;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+} */
 
-.card-trip > image {
+/* .card-trip > image {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -15,16 +16,16 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-}
+} */
 
-.card-trip .p {
+/* .card-trip .p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
-}
+} */
 
 
-.card-trip .card-trip-infos {
+/* .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -37,31 +38,27 @@
   right: 16px;
   top: -20px;
   width: 40px;
-}
+} */
 
 .textarea{
-  height: 300rpx;
+  height: 280rpx;
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
-  border: 1rpx solid black;
+  border: 2rpx solid #c2bfbf;
   border-radius: 8rpx;
-  margin-bottom: 30rpx;
+  padding:20rpx;
+  margin: 20rpx 1rpx 30rpx 1rpx;
 }
 
 .container{
-  margin: 30rpx 30rpx;
-  padding:30rpx 30rpx;
+  padding: 32rpx 48rpx;
+  margin: 16rpx;
 }
 
 .top-margin {
   height: 210rpx;
 }
 
-.textarea{
-  border: 1rpx solid #c2bfbf;
-  border-radius: 8rpx;
-  padding:10rpx;
-  margin-top: 10rpx;
-}
+
 
 .h2{
   font-weight: bold;
@@ -76,7 +73,7 @@
 }
 image{
   width:100%;
-  height:500rpx;
+  height:440rpx;
 }
 
 .btn-edit{
@@ -90,8 +87,8 @@ image{
   font-weight: bolder;
   width: 120rpx !important;
   position: absolute;
-  right: 70rpx;
-  top: 1600rpx;
+  right: 90rpx;
+  top: 1085rpx;
   z-index: 100;
 }
 
@@ -118,4 +115,24 @@ image{
   background: #d8c731;
   color: white;
   font-weight: bolder;
+}
+
+.scoreContent{
+  display: inline-block;
+}
+
+.boneLen{
+  margin-right:30rpx;
+  display: inline-block;
+}
+
+.scoreContent .boneLen:last-child{
+  margin-right:0;
+}
+
+.bone{
+  width:80rpx;
+  height:80rpx;
+  vertical-align: text-bottom;
+  display: inline-block;
 }

@@ -6,7 +6,32 @@ Page({
    */
   data: {
     image_url:["../../image/placeholder.png"],
+    fullBoneUrl:'/image/bone-full2.svg',
+    halfBoneUrl:'/image/bone-half.svg',
+    nullBoneUrl:'/image/bone-empty.svg',
+    score:0,
+    rate:2,
+    boneX:0,
   },
+
+attached: function(){
+  let {screenWidth} = wx.getSystemInfoSync();
+  let rate = screenWidth / 750;
+  this.setData({
+    rate: rate
+  })
+  const query = this.createSelectorQuery();
+  query.select('#scoreContent').boundingClientRect((res)=> {
+    this.setData({
+      bonetX: res.left
+    })
+  }).exec()
+},
+
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -80,6 +105,21 @@ Page({
         })
       }
     })
-  }
+  },
+
+  setScore(e){
+    // console.log(e.currentTarget.dataset.index)
+    let score = e.currentTarget.dataset.index + 1;
+    if (score - this.data.score == 0.5) {
+      this.setData({
+        score: score
+      })
+    } else {
+      this.setData({
+        score: score - 0.5
+      })
+    }
+  },
+
 
 })
