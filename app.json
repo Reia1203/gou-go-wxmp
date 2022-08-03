@@ -10,10 +10,10 @@
     "pages/category/category",
     "pages/spaceform/spaceform",
     "pages/review/review",
+    "pages/allReviews/allReviews",
     "pages/picker/picker",
     "pages/textarea/textarea",
-    "pages/stories/stories",
-    "pages/map/map"
+    "pages/stories/stories"
   ],
   "requiredPrivateInfos": [
     "getLocation",

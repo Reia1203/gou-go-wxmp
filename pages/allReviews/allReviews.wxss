@@ -1,0 +1,37 @@
+.bottom-margin {
+  height: 230rpx;
+}
+
+.top-margin {
+  height: 210rpx;
+}
+
+
+.review-img {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+
+.review-text {
+  margin-top: 20rpx;
+}
+
+.review-text text{
+  display: block;
+  margin-left: 50rpx;
+  
+}
+.review-preview{
+  display: flex;
+}
+
+.review-name {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.review-date {
+  color:darkgrey;
+  margin-bottom: 30rpx;
+}

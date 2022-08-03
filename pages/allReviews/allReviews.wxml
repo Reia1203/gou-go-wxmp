@@ -1,0 +1,15 @@
+<navbar />
+
+<view class="top-margin"> </view>
+
+<view>Reviews for {{space.name}}</view>
+
+<view wx:for="{{reviews}}" wx:for-item="review"  class="review-card" wx:key="unique">
+  <image src="/image/dog.svg" class="review-img"></image>
+  <text class="review-name">Shanghai Dog</text>
+  <text>{{review.date}}</text>
+  <text>{{review.rating}}</text>
+  <text>{{review.comment}}</text>
+</view>
+
+<view class="bottom-margin"> </view>

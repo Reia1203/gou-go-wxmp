@@ -34,18 +34,18 @@ Page({
       }
     })
   },
-  navRoad(event) {
-    console.log(event)
-    wx.getLocation({ //获取当前经纬度
-      type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
-      success: function (res) {
-        wx.openLocation({ //​使用微信内置地图查看位置。
-          latitude: event.currentTarget.dataset.marker.latitude, //要去的纬度-地址
-          longitude: event.currentTarget.dataset.marker.longitude, //要去的经度-地址
-          name: event.currentTarget.dataset.marker.name,
-          address: event.currentTarget.dataset.marker.address
-        })
-      }
-    })
-  }
+  // navRoad(event) {
+  //   console.log(event)
+  //   wx.getLocation({ //获取当前经纬度
+  //     type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
+  //     success: function (res) {
+  //       wx.openLocation({ //​使用微信内置地图查看位置。
+  //         latitude: event.currentTarget.dataset.marker.latitude, //要去的纬度-地址
+  //         longitude: event.currentTarget.dataset.marker.longitude, //要去的经度-地址
+  //         name: event.currentTarget.dataset.marker.name,
+  //         address: event.currentTarget.dataset.marker.address
+  //       })
+  //     }
+  //   })
+  // }
 })
