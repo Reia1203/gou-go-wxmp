@@ -27,19 +27,6 @@
 
   <view class="h2">Name of the place</view>
 
-
-
-  <view class="h2">Review</view>
-  <view class="section">
-    <textarea class="textarea" placeholder="Tell me more about this space!" auto-focus />
-  </view>
-
-  <view class="contain">
-        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
-        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
-  </view>
-  
-
   <view class="h2">Rating</view>
   <view class="scoreContent" id="scoreContent">
     <block wx:for='{{5}}' wx:key='item'>
@@ -49,7 +36,22 @@
     </block>
   </view>
 
-  <view>{{score}}</view>
+
+  <view class="h2">Review</view>
+  <view class="section">
+    <textarea class="textarea" placeholder="Tell me more about this space!" auto-focus />
+  </view>
+
+  <view>upload an image of your time in {{space.name}}</view>
+  <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
+        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
+  </view>
+  
+
+
+
+  <!-- <view>{{score}}</view> -->
 
 
   <button form-type="submit" class="btn-flat">Submit</button>
