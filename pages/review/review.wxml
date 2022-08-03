@@ -3,7 +3,7 @@
 <view class="top-margin"></view>
 
 
-<view class="card-trip">
+<!-- <view class="card-trip">
   <image src="https://img0.baidu.com/it/u=637877736,215032142&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=496" />
   <view class="card-trip-infos">
     <view>
@@ -15,9 +15,19 @@
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </view>
   
-</view>
+</view> -->
+
+
+
+
+
+
 
 <view class="container">
+
+  <view class="h2">Name of the place</view>
+
+
 
   <view class="h2">Review</view>
   <view class="section">
@@ -29,8 +39,18 @@
         <button bindtap="uploadImage" class="btn-edit">Edit</button>     
   </view>
   
- 
 
-  <view>Rating</view>
-  <button form-type="submit" class="btn-flat">Save</button>
+  <view class="h2">Rating</view>
+  <view class="scoreContent" id="scoreContent">
+    <block wx:for='{{5}}' wx:key='item'>
+      <view class='boneLen' catchtap="setScore" data-index="{{index}}">
+      <image class="bone" src="{{score>index?(score>index+0.5?fullBoneUrl:halfBoneUrl):nullBoneUrl}}"></image>
+      </view>
+    </block>
+  </view>
+
+  <view>{{score}}</view>
+
+
+  <button form-type="submit" class="btn-flat">Submit</button>
 </view>
