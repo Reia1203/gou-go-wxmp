@@ -39,7 +39,7 @@
   
           <view class="page-section-title">This location provides:</view>
             <view class="choice">
-              <label class="p"><checkbox value="dog_bowl" />Dog Bowl</label>
+              <label class="p"><checkbox value="dog_bowl" />Water</label>
               <label class="p"><checkbox value="dog_food" />Dog Food</label>
             </view>
         </checkbox-group>

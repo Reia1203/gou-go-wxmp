@@ -22,7 +22,7 @@ Page({
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Food', 'Bars','Cafes','Parks','Vets','Other'], 
-      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai']
+      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican','Thai']
     ],
     // objectMultiArray: [
     //   [
@@ -160,7 +160,7 @@ Page({
       case 0:
         switch (data.multiIndex[0]) {
           case 0:
-            data.multiArray[1] = ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai']; 
+            data.multiArray[1] = ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican','Thai']; 
             break;
           case 1:
             data.multiArray[1] = ['All Bars'];
@@ -210,6 +210,9 @@ Page({
       data: data,
       success(res){
         console.log(res)
+        // wx.switchTab({
+        //   url: `../landing/landing`,
+        // })
         wx.uploadFile({
           url: `${url}/spaces/${res.data.space.id}/upload`,
           filePath: page.data.image_url[0],
@@ -229,8 +232,10 @@ Page({
             })
           },
           fail(err) {
-            console
             console.log(err)
+            wx.switchTab({
+              url: `../landing/landing`,
+            })
           }
         })
         

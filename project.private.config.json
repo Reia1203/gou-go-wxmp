@@ -74,14 +74,14 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
-          "query": "id=1",
+          "query": "id=48",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "show",
           "pathName": "pages/show/show",
-          "query": "id=9",
+          "query": "id=101",
           "launchMode": "default",
           "scene": null
         },
@@ -110,6 +110,13 @@
           "name": "map",
           "pathName": "pages/map/map",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/allReviews/allReviews",
+          "query": "id=48",
           "launchMode": "default",
           "scene": null
         }
