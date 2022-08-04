@@ -1,7 +1,7 @@
 <navbar />
 <view class="top-margin"> </view>
 
-<image src="/image/dogs_brunch.png" class="hero-img" mode="aspectFit"></image>
+<image src="/image/dogs_brunch.png" class="hero-img" mode="aspectFill"></image>
 
 {{typed}}
 

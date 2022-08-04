@@ -1,7 +1,4 @@
 
-.space-container {
-
-}
 
 .space-container image {
   width: 100%;
@@ -12,32 +9,62 @@
   font-weight: bold;
   font-size: 40rpx;
   display: block;
+  margin-bottom: 20rpx;
+}
+
+.space_name {
+  font-size: 50rpx;
+  margin: 30rpx 0;
 }
 
 .features-text {
-  margin-top: 20rpx;
-  display: flex;
-  flex-direction: column;
+  font-size: 35rpx;
+
+
+}
+.feature {
+margin: 30rpx 150rpx;
+border: 2px solid #F2DF3A;
+padding: 10rpx 10rpx;
+border-radius: 25rpx;
+display: flex;
+flex-direction: column;
+
 }
 
 .space-info {
-  display: flex;
-  margin: 0 40rpx;
+  margin: 10rpx 40rpx;
+  text-align: center;
+
+}
+
+/* .space-info text {
+  padding: 10rpx 0;
+  text-align: center;
+} */
+
+.space-text {
+  text-align:center;
+  font-size: 35rpx;
 }
 
 .yellow-btn {
   background-color: #F2DF3A;
-  width: 100rpx;
-  height: 50rpx;
-  padding: 12px 20px;
   font-weight: bold;
   border-radius: 5rpx;
-  display: block;
-  text-align: center;
-  align-self: flex-end;
-  position: absolute;
-  right: 30rpx;
-  margin-right: 20rpx;
+  width: 125rpx;
+  height: 35rpx;
+  font-size: 24rpx;
+  padding: 12rpx 18rpx;
+
+
+}
+
+.read-btn {
+  margin-left: 30rpx;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .horizontal-line {
@@ -48,39 +75,40 @@
 }
 
 .review-container {
-  height: 200rpx;
-  margin: 20rpx;
+  
+  margin: 0 40rpx;
+  /* display: flex; */
 }
 
-.review-btn {
-  background-color: #F2DF3A;
-  width: 200rpx;
-  height: 50rpx;
-  padding: 12px 20px;
-  font-weight: bold;
-  border-radius: 5rpx;
-  display: block;
-  text-align: center;
-  align-self: flex-end;
-  position: absolute;
-  right: 30rpx;
-  margin-right: 20rpx;
+.review-container text{
+  padding: 2rpx 0;
+  /* display: flex; */
 }
+
+.review-comment {
+  font-size: 35rpx;
+  margin-top: 30rpx;
+}
+
+.add-review {
+  display: flex;
+  
+  
+}
+
+.add-review image{
+  width: 80rpx;
+  height: 80rpx;
+  align-items: center;
+  margin: 40rpx auto;
+}
+
 
 .rec-container {
-  margin: 20rpx;
+  margin: 40rpx;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 240rpx;
-  background: white;
-  box-shadow: 0 0 30rpx rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin: 20rpx 0;
-  border-radius: 10rpx;
-}
+
 
 .card-product image {
   height: 100%;
@@ -121,16 +149,13 @@
 }
 
 .top-margin {
-  height: 210rpx;
+  height: 220rpx;
 }
 
 .map-icon {
   width: 100rpx !important;
   height: 100rpx !important;
-  align-self: flex-end;
-  position: absolute;
-  right: 30rpx;
-  margin-right: 20rpx;
+  margin-top: 20rpx;
 }
 
 .heart-icon {
@@ -140,6 +165,94 @@
   right: 20rpx;
 }
 
-.space-text{
+
+
+.review-img {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+
+
+.review-text text{
+  display: block;
+  margin-left: 30rpx;
+  
+}
+
+.review-preview{
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-name {
+  font-weight: 900;
+}
+
+.review-date {
+  color:darkgrey;
+  
+}
+
+.right-arrow {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-top image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.feaures-card-text {
+  margin: 30rpx 0;
+
   display: flex;
 }
+
+.feature-card {
+  border: 2px solid #F2DF3A;
+  padding: 5rpx 10rpx;
+  border-radius: 25rpx;
+  margin: 40rpx 20rpx 40rpx 0;
+  
+  
+  }
+
+  .card-product .h2 {
+    font-size: 40rpx;
+    font-weight: bold;
+    margin: 20rpx 20rpx 0 20rpx;
+  }
+
+  .card-product {
+    overflow: hidden;
+    height: 250rpx;
+    background: white;
+    box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
+    display: flex;
+    margin: 20rpx 0;
+    border-radius: 10rpx;
+  }
+
+  .name-container {
+    position: relative;
+  }
+
+  .card-product .card-product-infos {
+    padding: 5rpx 20rpx 20rpx 20rpx;
+    
+  }
+
+  .card-product .p {
+    font-size: 28rpx;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 20rpx;
+    /* margin-top: 10rpx; */
+  }

@@ -22,10 +22,9 @@
 
 
 
-
+<form bindsubmit="submit">
 <view class="container">
-
-  <view class="h2">Name of the place</view>
+<view class="h2">{{space.name}} Review</view>
 
   <view class="h2">Rating</view>
   <view class="scoreContent" id="scoreContent">
@@ -36,10 +35,11 @@
     </block>
   </view>
 
+ 
+  
 
-  <view class="h2">Review</view>
   <view class="section">
-    <textarea class="textarea" placeholder="Tell me more about this space!" auto-focus />
+    <textarea name="comment" class="textarea" placeholder="Tell us more about your time at {{space.name}}!" auto-focus />
   </view>
 
   <view>upload an image of your time in {{space.name}}</view>
@@ -54,5 +54,7 @@
   <!-- <view>{{score}}</view> -->
 
 
-  <button form-type="submit" class="btn-flat">Submit</button>
+
+  <button form-type="submit" class="btn-flat" data-id="{{space.id}}">Submit</button>
 </view>
+</form>

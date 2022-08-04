@@ -16,6 +16,7 @@ Page({
     console.log(options)
     console.log(options.id)
     this.getSpace(options.id);
+    // this.getFeatureReview(options.id);
 
     console.log(options)
     let page = this;
@@ -50,6 +51,21 @@ Page({
       header,
       success(res) {
         page.setData({ space: res.data.space })
+      }
+    })
+  },
+
+  getFeatureReview(id) {
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces/${id}/featured_review`,
+      method: 'GET',
+      header,
+      success(res) {
+        console.log("##################")
+        console.log(res)
+        page.setData({ featuredReview: res.data.featured_review })
       }
     })
   },
@@ -126,19 +142,33 @@ Page({
   goToMap(e) {
     // const id = e.currentTarget.dataset.id;
     const { space } = this.data
-    wx.getLocation({ //获取当前经纬度
-      type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
-      success: function (res) {
+    // wx.getLocation({ //获取当前经纬度
+    //   type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
+    //   success: function (res) {
         wx.openLocation({ //​使用微信内置地图查看位置。
           latitude: space.latitude, //要去的纬度-地址
           longitude: space.longitude, //要去的经度-地址
           name: space.name,
           address: space.address
         })
-      }
-    })
+    //   }
+    // })
     // wx.navigateTo({
     //   url: `../map/map?id=${id}`,
     // })
+  }, 
+
+  seeAllReviews(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../allReviews/allReviews?id=${id}`,
+    })
+  },
+  addReview(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../review/review?id=${id}`,
+    })
   }
+
 })

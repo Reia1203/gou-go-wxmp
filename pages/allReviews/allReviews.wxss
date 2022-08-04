@@ -1,0 +1,56 @@
+.review-card {
+  border-bottom: 1rpx solid darkgrey;
+  
+}
+
+.bottom-margin {
+  height: 230rpx;
+}
+
+.top-margin {
+  height: 210rpx;
+}
+
+
+.review-img {
+  width: 130rpx;
+  height: 130rpx;
+  display: block;
+}
+
+.space_name {
+  font-size: 50rpx;
+  margin: 30rpx auto 50rpx;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+
+.review-text text{
+  display: block;
+  margin-left: 30rpx;
+  
+}
+.review-preview{
+  display: flex;
+  margin: 40rpx 40rpx 0 40rpx;
+}
+
+.review-name {
+  font-weight: 900;
+}
+
+.review-date {
+  color:darkgrey;
+
+}
+
+.review-preview{
+  display: flex;
+}
+
+.review-comment {
+  font-size: 35rpx;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}

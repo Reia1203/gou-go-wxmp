@@ -1,4 +1,5 @@
 // pages/review/review.js
+const app = getApp();
 Page({
 
   /**
@@ -37,7 +38,20 @@ attached: function(){
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log(options)
+    this.getSpace(options.id);
+  },
+  getSpace(id) {
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/spaces/${id}`,
+      method: 'GET',
+      header,
+      success(res) {
+        page.setData({ space: res.data.space })
+      }
+    })
   },
 
   /**
@@ -120,6 +134,26 @@ attached: function(){
       })
     }
   },
-
+  submit(e) {
+    console.log(e);
+    const id = e.detail.target.dataset.id;
+    console.log(id)
+    let data = e.detail.value
+  let header = wx.getStorageSync('header')
+    wx.request({
+      
+      url: `${app.globalData.baseUrl}/spaces/${id}/reviews`,
+      method:'POST',
+      header,
+      data: data,
+      space_id: id,
+      success(res){
+        console.log(res)
+        wx.navigateTo({
+          url: `../show/show?id=${id}`,
+        })
+      }
+    })
+  }
 
 })

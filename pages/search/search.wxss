@@ -18,8 +18,9 @@
 
 
 .search-container image{
-  width: 50rpx;
-  height: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #F9F9F9;
 }
 .weui-input{
   height: 66rpx;
@@ -35,6 +36,7 @@
   background-color: white;
   padding: 0 !important;
   width: 30px !important;
+  background-color: #F9F9F9;
 }
 
 .card-product {
@@ -94,6 +96,6 @@
 }
 
 .top-margin {
-  height: 200rpx;
+  height: 250rpx;
 }
 
