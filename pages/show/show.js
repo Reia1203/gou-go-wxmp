@@ -163,5 +163,12 @@ Page({
     wx.navigateTo({
       url: `../allReviews/allReviews?id=${id}`,
     })
+  },
+  addReview(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../review/review?id=${id}`,
+    })
   }
+
 })

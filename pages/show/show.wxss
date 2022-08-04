@@ -108,16 +108,7 @@ flex-direction: column;
   margin: 40rpx;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 240rpx;
-  background: white;
-  box-shadow: 0 0 30rpx rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin: 20rpx 0;
-  border-radius: 10rpx;
-}
+
 
 .card-product image {
   height: 100%;
@@ -158,7 +149,7 @@ flex-direction: column;
 }
 
 .top-margin {
-  height: 210rpx;
+  height: 220rpx;
 }
 
 .map-icon {
@@ -188,6 +179,7 @@ flex-direction: column;
   margin-left: 30rpx;
   
 }
+
 .review-preview{
   display: flex;
   justify-content: space-between;
@@ -216,3 +208,51 @@ flex-direction: column;
   width: 80rpx;
   height: 80rpx;
 }
+
+.feaures-card-text {
+  margin: 30rpx 0;
+
+  display: flex;
+}
+
+.feature-card {
+  border: 2px solid #F2DF3A;
+  padding: 5rpx 10rpx;
+  border-radius: 25rpx;
+  margin: 40rpx 20rpx 40rpx 0;
+  
+  
+  }
+
+  .card-product .h2 {
+    font-size: 40rpx;
+    font-weight: bold;
+    margin: 20rpx 20rpx 0 20rpx;
+  }
+
+  .card-product {
+    overflow: hidden;
+    height: 250rpx;
+    background: white;
+    box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
+    display: flex;
+    margin: 20rpx 0;
+    border-radius: 10rpx;
+  }
+
+  .name-container {
+    position: relative;
+  }
+
+  .card-product .card-product-infos {
+    padding: 5rpx 20rpx 20rpx 20rpx;
+    
+  }
+
+  .card-product .p {
+    font-size: 28rpx;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 20rpx;
+    /* margin-top: 10rpx; */
+  }

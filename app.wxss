@@ -42,4 +42,5 @@ text, view{
 
 page {
   font-family: 'Raleway', sans-serif;
+  background-color: #F9F9F9;
 }

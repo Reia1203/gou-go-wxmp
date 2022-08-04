@@ -119,6 +119,13 @@
           "query": "id=48",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "review",
+          "pathName": "pages/review/review",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

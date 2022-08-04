@@ -2,14 +2,19 @@
 
 <view class="top-margin"> </view>
 
-<view>Reviews for {{space.name}}</view>
+<view class="space_name">Reviews for {{space.name}}</view>
 
 <view wx:for="{{reviews}}" wx:for-item="review"  class="review-card" wx:key="unique">
-  <image src="/image/dog.svg" class="review-img"></image>
-  <text class="review-name">Shanghai Dog</text>
-  <text>{{review.date}}</text>
-  <text>{{review.rating}}</text>
-  <text>{{review.comment}}</text>
+  <view class="review-preview">
+    <image src="/image/dog.svg" class="review-img"></image>
+    <view class="review-text">
+      <text class="review-name">Shanghai Dog</text>
+      <text class="review-date">{{review.date}}</text>
+      <text class="review-date">Paw-friendly rating: {{review.rating}}/5</text>
+      
+      <text class="review-comment">"{{review.comment}}"</text>
+  </view>
+</view>
 </view>
 
 <view class="bottom-margin"> </view>
