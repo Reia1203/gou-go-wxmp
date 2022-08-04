@@ -15,8 +15,7 @@
     "pages/textarea/textarea",
     "pages/stories/stories",
     "pages/map/map",
-    "pages/dogprofile/dogprofile",
-    "pages/stories/stories"
+    "pages/dogprofile/dogprofile"
   ],
   "requiredPrivateInfos": [
     "getLocation",

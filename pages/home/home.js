@@ -10,6 +10,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
+    animation: false
   },
 
   /**
@@ -43,6 +44,12 @@ Page({
           canIUseGetUserProfile: true
         })
       }
+      setTimeout(() => {
+        this.setData({animation: true})
+      }, 
+      2000)  
+
+      
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
