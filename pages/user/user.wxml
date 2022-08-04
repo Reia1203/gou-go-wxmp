@@ -1,0 +1,51 @@
+<navbar />
+
+<view class="top-margin"> </view>
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <image class="userinfo-avatar" src="/image/avatar.svg"></image>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button>
+    </block> 
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+    </block>
+  </view>
+
+  <!-- <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+      
+
+  <!-- <view class="add-space">
+    <text>Add a location </text>
+    <image src="/image/plus_black.png" class="icon"></image>
+  </view> -->
+
+<!-- Review Container -->
+  <!-- <view class="review-container">
+    <text class="bold-text">My Reviews</text>
+    <text class="yellow-btn">Read More</text>
+  </view> -->
+
+
+<text class="bold-text">My Favorite Places</text>
+<view class="favorites-container">
+      <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+    <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+    </image>
+    <view class="card-product-infos">
+      <view class="h2">{{space.name}}</view>
+      <view class="p">Dogs allowed: {{space.access}}</view>
+      <!-- <view class="p">{{space.features}}</view> -->
+  </view>
+  </view>
+    <!-- <text class="yellow-btn">See More</text> -->
+  </view>
+</view>
+
+<view class="bottom-margin"> </view>
+
+

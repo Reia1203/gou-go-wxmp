@@ -1,0 +1,19 @@
+<navbar />
+<view class="top-margin"> </view>
+
+  <text class="category-name">{{spaces[0].category}}</text>
+
+
+
+<view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+  
+  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  </image>
+  <view class="card-product-infos">
+    <view class="h2">{{space.name}}</view>
+    <view class="p">{{space.access}}</view>
+    <view class="p">{{space.features}}</view>
+</view>
+</view>
+
+<view class="bottom-margin"> </view>

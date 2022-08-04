@@ -1,7 +1,135 @@
 {
   "projectname": "gou-go-wxmp",
   "setting": {
-    "compileHotReLoad": true
+    "compileHotReLoad": false,
+    "urlCheck": false
   },
-  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/landing/landing",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/user/user",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "landing",
+          "pathName": "pages/landing/landing",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/logs/logs",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "spaceform",
+          "pathName": "pages/spaceform/spaceform",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "show",
+          "pathName": "pages/show/show",
+          "query": "id=48",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "show",
+          "pathName": "pages/show/show",
+          "query": "id=101",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "show",
+          "pathName": "pages/show/show",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/review/review",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "category",
+          "pathName": "pages/category/category",
+          "query": "category=restaurant",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "map",
+          "pathName": "pages/map/map",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/allReviews/allReviews",
+          "query": "id=48",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "review",
+          "pathName": "pages/review/review",
+
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "2.24.7"
 }

@@ -1,0 +1,34 @@
+<navbar />
+<view class="top-margin"> </view>
+<form bindsubmit="submit" class="search-container">
+      
+        <view class="page-section-title">Search Gou-Go</view>
+        <view class="search-container">
+          <input class="weui-input" type="search" name="search" placeholder="Ex: Charlies" />
+          <button class="search-button" form-type="submit">
+            <image src="/image/search-select.png"></image>
+          </button>
+          
+        </view>
+  
+
+</form>
+
+<view wx:if="{{spaces.length > 0}}">
+  <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+    
+    <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+    </image>
+    <view class="card-product-infos">
+      <view class="h2">{{space.name}}</view>
+      <view class="p">{{space.access}}</view>
+      <view class="p">{{space.features}}</view>
+  </view>
+  </view>
+</view>
+
+<view wx:if="{{spaces.length === 0}}" class="reg-text">
+  <text >Sorry, we couldn't find any exact matches. Please try searching another keyword.</text>
+</view>
+
+<view class="bottom-margin"> </view>

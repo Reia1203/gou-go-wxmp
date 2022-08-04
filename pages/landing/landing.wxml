@@ -1,0 +1,62 @@
+<navbar />
+
+<view class="top-margin"> </view>
+
+<view class="category-container">
+<view class="row-container">
+  <view class="paw-container" bindtap="goToCategory" data-category="restaurant">
+    <image src="/image/burger.svg" class="paw-icon" mode="aspectFit"  />
+    <text>FOOD</text>
+  </view>
+  <view class="paw-container" bindtap="goToCategory" data-category="bar" >
+    <image src="/image/cocktails.svg" class="paw-icon" mode="aspectFit"  />
+    <text>BARS</text>
+  </view>
+  <view class="paw-container" bindtap="goToCategory" data-category="cafe">
+    <image src="/image/coffee_cup.svg" class="paw-icon" mode="aspectFit" />
+    <text>CAFES</text>
+  </view>
+</view>
+<view class="row-container">
+  <view class="paw-container" bindtap="goToCategory" data-category="park">
+    <image src="/image/park_tree.svg" class="paw-icon" mode="aspectFit"/>
+    <text>PARKS</text>
+  </view>
+  <view class="paw-container" bindtap="goToCategory" data-category="vet">
+    <image src="/image/health.svg" class="paw-icon" mode="aspectFit"/>
+    <text>VETS</text>
+  </view>
+  <view class="paw-container" bindtap="goToCategory" data-category="other">
+    <image src="/image/other_paw.svg" class="paw-icon" mode="aspectFit"/>
+    <text>OTHER</text>
+  </view>
+</view>
+</view>
+
+<view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  </image>
+  <view class="name-container">
+    <view class="h2">{{space.name}}</view>
+    <view class="card-product-infos">
+
+      
+      <view class="p">{{space.address}}</view>
+      <view class="features-text">
+          <text class="feature">{{space.category}}</text>
+          <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text>
+
+          <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
+          <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+            <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
+            <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
+            </text>
+
+          </view>
+        </view>
+      <!-- <view class="p">{{space.features}}</view> -->
+  </view>
+</view>
+</view>
+
+<view class="bottom-margin"> </view>

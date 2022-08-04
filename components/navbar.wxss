@@ -1,0 +1,39 @@
+.navbar {
+  height: 180rpx;
+  background-color: #3AB4F2;
+  /* background-color: #8A39E1; */
+  display: flex;
+  color: white;
+  align-items: center;
+  /* justify-content: center; */
+  font-weight: bolder;
+  padding-top: 40rpx;
+  font-size: 50rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 90rpx;
+}
+.brand {
+  color: white !important;
+  font-family: 'Pacifico-Regular';
+}
+
+.back-btn {
+  height: 70rpx;
+  width: 70rpx;
+  margin-left: 50rpx;
+}
+
+.show-img {
+  width: 120rpx;
+  height: 120rpx;
+  z-index: 100;
+}

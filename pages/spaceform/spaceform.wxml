@@ -1,0 +1,63 @@
+<!--pages/spaceform/spaceform.wxml-->
+<!--pages/post/post.wxml-->
+
+<navbar />
+
+<view class="top-margin"> </view>
+<view class="container-form">
+  <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
+        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
+  </view>
+ 
+
+    <form bindsubmit="submit">
+      <view class="page-section mb">
+        <view class="page-section-title">Name:</view>
+          <input class="weui-input" name="name" placeholder="Please type name of the space......" />
+      </view>
+
+      <view class="page-section mb">
+        <view class="page-section-title">Address:</view>
+          <input bindtap="toPosition" value="{{address}}"class="weui-input" name="address" placeholder="Please type address of the space......" />
+      </view>
+
+      <view class="page-section page-section-gap mb">
+        <checkbox-group name="features">
+          <view class="page-section-title">Where is your dog allowed:</view>
+          <view class="choice">
+            <view>
+              <checkbox value="outdoor" />
+              <label class="p">Outdoor</label>
+            </view>
+            <view>
+              <checkbox value="indoor" />
+              <label class="p">Indoor</label>
+            </view>
+            
+          </view>
+  
+          <view class="page-section-title">This location provides:</view>
+            <view class="choice">
+              <label class="p"><checkbox value="dog_bowl" />Water</label>
+              <label class="p"><checkbox value="dog_food" />Dog Food</label>
+            </view>
+        </checkbox-group>
+      </view>
+
+      <view class="section mb">
+        <view class="section__title" class="page-section-title">Categories:</view>
+          <picker class="p" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="picker">
+              <view>
+                {{multiArray[0][multiIndex[0]]}} , {{multiArray[1][multiIndex[1]]}}
+              </view>
+            </view>
+          </picker>
+      </view>
+
+      <button form-type="submit" class="btn-flat">Save</button>
+    </form>
+</view>
+
+<view class="bottom-margin"> </view>

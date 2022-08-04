@@ -1,0 +1,14 @@
+<navbar />
+<view class="top-margin"> </view>
+
+<image src="/image/dogs_brunch.png" class="hero-img" mode="aspectFill"></image>
+
+{{typed}}
+
+<view class="home-container">
+  <text class="home-bold">Looking for dog-friendly places in Shanghai?</text>
+  <text class="home-small">Use Gou-Go to keep your dog on the go!</text>
+  <text class="home-btn" bindtap="goToLanding">Browse Locations ></text>
+
+</view>
+<view class="bottom-margin"> </view>
