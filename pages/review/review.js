@@ -139,7 +139,9 @@ attached: function(){
     const id = e.detail.target.dataset.id;
     console.log(id)
     let data = e.detail.value
-  let header = wx.getStorageSync('header')
+    let header = wx.getStorageSync('header')
+    const url = app.globalData.baseUrl
+    const page = this
     wx.request({
       
       url: `${app.globalData.baseUrl}/spaces/${id}/reviews`,
@@ -148,9 +150,31 @@ attached: function(){
       data: data,
       space_id: id,
       success(res){
-        console.log(res)
-        wx.navigateTo({
-          url: `../show/show?id=${id}`,
+        console.log(res)        
+        wx.uploadFile({
+          url: `${url}/spaces/${id}/reviews/${res.data.id}/upload`,
+          filePath: page.data.image_url[0],
+          name: 'file',
+          header: header,
+          success(res) {
+            console.log('this is for upload file', res)
+            wx.showModal({
+              showCancel: false,
+              title: 'Thank you',
+              content: 'Your submission is under review.',
+              success(res) {
+                wx.navigateTo({
+                  url: `../show/show?id=${id}`,
+                })
+              }
+            })
+          },
+          fail(err) {
+            console.log(err)
+            wx.switchTab({
+              url: `../landing/landing`,
+            })
+          }
         })
       }
     })
