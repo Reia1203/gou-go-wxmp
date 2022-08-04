@@ -137,11 +137,16 @@ attached: function(){
   submit(e) {
     console.log(e);
     const id = e.detail.target.dataset.id;
-    console.log(id)
-    let data = e.detail.value
+
+    let data = {
+      comment: e.detail.value.comment,
+      rating: this.data.score
+    }
+  
     let header = wx.getStorageSync('header')
     const url = app.globalData.baseUrl
     const page = this
+
     wx.request({
       
       url: `${app.globalData.baseUrl}/spaces/${id}/reviews`,
