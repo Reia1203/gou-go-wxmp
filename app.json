@@ -13,7 +13,6 @@
     "pages/allReviews/allReviews",
     "pages/picker/picker",
     "pages/textarea/textarea",
-    "pages/stories/stories",
     "pages/map/map",
     "pages/dogprofile/dogprofile"
   ],

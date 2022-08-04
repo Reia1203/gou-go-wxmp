@@ -11,6 +11,7 @@
       <text class="review-name">Shanghai Dog</text>
       <text class="review-date">{{review.date}}</text>
       <text class="review-date">Paw-friendly rating: {{review.rating}}/5</text>
+      <!-- <image src="{{review.image}}"></image> -->
       
       <text class="review-comment">"{{review.comment}}"</text>
   </view>
