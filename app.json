@@ -13,6 +13,9 @@
     "pages/allReviews/allReviews",
     "pages/picker/picker",
     "pages/textarea/textarea",
+    "pages/stories/stories",
+    "pages/map/map",
+    "pages/dogprofile/dogprofile",
     "pages/stories/stories"
   ],
   "requiredPrivateInfos": [
@@ -31,7 +34,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "导航需要" 
+      "desc": "导航需要"
     }
   },
   "tabBar": {
@@ -62,5 +65,4 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
-  
 }

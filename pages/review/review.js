@@ -122,7 +122,7 @@ attached: function(){
   },
 
   setScore(e){
-    // console.log(e.currentTarget.dataset.index)
+    console.log(e.currentTarget)
     let score = e.currentTarget.dataset.index + 1;
     if (score - this.data.score == 0.5) {
       this.setData({

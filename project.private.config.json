@@ -123,6 +123,7 @@
         {
           "name": "review",
           "pathName": "pages/review/review",
+
           "query": "",
           "launchMode": "default",
           "scene": null
