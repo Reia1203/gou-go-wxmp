@@ -95,7 +95,7 @@
         {
           "name": "",
           "pathName": "pages/review/review",
-          "query": "",
+          "query": "id=101",
           "launchMode": "default",
           "scene": null
         },
@@ -126,7 +126,8 @@
           "query": "",
           "launchMode": "default",
           "scene": null
-        }
+        },
+
       ]
     }
   },

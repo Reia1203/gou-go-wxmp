@@ -21,7 +21,7 @@
         <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text>
 
         <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-        <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+        <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique" class="access-feature">
           <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
           <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
           </text>
@@ -95,13 +95,15 @@
           <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature-card">{{space.sub_category}} </text>
 
           <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-          <view wx:for="{{space.features}}" wx:for-item="feature-card" wx:key="unique">
+          <block class="access-feature" wx:for="{{space.features}}" wx:for-item="feature-card" wx:key="unique" >
             <text wx:if="{{feature === 'indoor'}}" class="feature-card">Indoors</text>
             <text wx:if="{{feature === 'outdoor'}}" class="feature-card">Outdoors
             </text>
 
-          </view>
+          </block>
         </view>
+
+
       <!-- <view class="p">{{space.features}}</view> -->
   </view>
 </view>

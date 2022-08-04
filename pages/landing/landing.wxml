@@ -37,11 +37,13 @@
   <image src="{{ space.image }}" class="space-img" mode="aspectFill">
   </image>
   <view class="name-container">
-    <view class="h2">{{space.name}}</view>
+    
     <view class="card-product-infos">
-
+    <view>
+      <view class="h2">{{space.name}}</view>
       
       <view class="p">{{space.address}}</view>
+    </view>
       <view class="features-text">
           <text class="feature">{{space.category}}</text>
           <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text>

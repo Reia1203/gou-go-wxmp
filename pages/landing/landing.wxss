@@ -55,6 +55,8 @@
 }
 .name-container {
   position: relative;
+  width: 60%;
+  height: 100%;
 }
 .card-product .h2 {
   font-size: 40rpx;
@@ -70,8 +72,12 @@
   /* margin-top: 10rpx; */
 }
 
-.card-product .card-product-infos {
-  padding: 5rpx 20rpx 20rpx 20rpx;
+.card-product-infos {
+  /* padding: 5rpx 20rpx 20rpx 20rpx; */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
   
 }
 
@@ -88,17 +94,19 @@
   font-family:'Raleway';
   font-weight: bold;
 }
-.feaures-text {
-  margin: 30rpx 0;
-
+.features-text {
+  /* margin: 30rpx 0; */
   display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+
 }
 
 .feature {
   border: 2px solid #F2DF3A;
   padding: 5rpx 10rpx;
   border-radius: 25rpx;
-  margin: 40rpx 20rpx 40rpx 0;
+  /* margin: 40rpx 20rpx 40rpx 0; */
   
   
   }
