@@ -20,8 +20,8 @@ Component({
       text: "ADD"
     }, {
       pagePath: "/pages/user/user",
-      iconPath: "/image/user.png",
-      selectedIconPath: "/image/user-select.png",
+      iconPath: "/image/dog.png",
+      selectedIconPath: "/image/dog-select.png",
       text: "ME"
     }]
   },
