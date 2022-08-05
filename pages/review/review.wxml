@@ -26,7 +26,7 @@
 <view class="container">
 <view class="h2">{{space.name}} Review</view>
 
-  <view class="h2">Rating</view>
+  <view >Paw-friendly rating:</view>
   <view class="scoreContent" id="scoreContent">
     <block wx:for='{{5}}' wx:key='item'>
       <view class='boneLen' catchtap="setScore" data-index="{{index}}">
@@ -39,12 +39,12 @@
   
 
   <view class="section">
-    <textarea name="comment" class="textarea" placeholder="Tell us more about your time at {{space.name}}!" auto-focus />
+    <textarea name="comment" class="textarea" placeholder="Tell us about your time at {{space.name}}!" auto-focus />
   </view>
 
-  <view>upload an image of your time in {{space.name}}</view>
+  <view>Share a picture from {{space.name}}:</view>
   <view class="contain">
-        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
+        <image class="upload-image" wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
         <button bindtap="uploadImage" class="btn-edit">Edit</button>     
   </view>
   

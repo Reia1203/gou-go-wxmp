@@ -15,7 +15,6 @@
 .review-img {
   width: 130rpx;
   height: 130rpx;
-  display: block;
 }
 
 .space_name {
@@ -34,10 +33,24 @@
 .review-preview{
   display: flex;
   margin: 40rpx 40rpx 0 40rpx;
+  justify-content: space-between;
+
+}
+
+.review-text{
+  width: 80%;
+}
+
+.review-text image {
+  width: 90%;
 }
 
 .review-name {
   font-weight: 900;
+}
+
+.review-img-large {
+  margin-bottom: 30rpx;
 }
 
 .review-date {
