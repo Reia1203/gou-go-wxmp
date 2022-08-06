@@ -4,9 +4,12 @@
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{!hasUserInfo}}">
-      <image class="userinfo-avatar" src="/image/avatar.svg"></image>
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
-      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button>
+      <image class="userinfo-avatar" src="{{picture_url}}"></image>
+      <view class="dog_name">
+        <text>{{dog_name}}</text>
+      </view>
+      <!-- <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button> -->
     </block> 
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -30,7 +33,8 @@
     <text class="yellow-btn">Read More</text>
   </view> -->
 
-
+<!-- {{picture_url}}
+{{dog_name}} -->
 <text class="bold-text">My Favorite Places</text>
 <view class="favorites-container">
   <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
@@ -46,16 +50,15 @@
     </view>
       <view class="features-text">
           <text class="feature">{{space.category}}</text>
-          <!-- <text wx:if="{{space.sub_category !== null}}" class="feature" class="feature" >{{space.sub_category}}</text> -->
-          <!-- <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text> -->
+          <text wx:if="{{space.category === 'Restaurant'}}" class="feature" >{{space.sub_category}} </text>
 
           <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-          <view class="access-features" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+          <block class="access-features" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
             <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
             <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
             </text>
 
-          </view>
+          </block>
         </view>
       <!-- <view class="p">{{space.features}}</view> -->
   </view>

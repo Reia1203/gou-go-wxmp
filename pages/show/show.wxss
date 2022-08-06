@@ -9,7 +9,7 @@
   font-weight: bold;
   font-size: 40rpx;
   display: block;
-  margin-bottom: 30rpx;
+  margin-bottom: 40rpx;
 }
 
 .space_name {
@@ -132,7 +132,7 @@ border-radius: 25rpx;
 .map-icon {
   width: 100rpx !important;
   height: 100rpx !important;
-  margin-top: 40rpx;
+  margin-top: 25rpx;
 }
 
 .heart-icon {
@@ -209,7 +209,7 @@ border-radius: 25rpx;
   }
   .card-product {
     overflow: hidden;
-    height: 250rpx;
+    height: 290rpx;
     background: white;
     box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
     display: flex;
@@ -242,6 +242,9 @@ border-radius: 25rpx;
     opacity: .7;
     margin-bottom: 10rpx;
     margin-left: 20rpx;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
   
   .card-product-infos {

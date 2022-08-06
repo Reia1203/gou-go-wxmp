@@ -20,7 +20,6 @@ App({
           wx.setStorageSync('user', loginRes.data.user)
           // app.globalData.user = loginRes.data.user
           // app.globalData.header = loginRes.data.headers
-
         }, 
         fail(loginError) {
           console.log({loginError})
@@ -28,20 +27,31 @@ App({
         })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
-
-    
     })
+
+    wx.getLocation({
+      success(res){
+        console.log("getting location")
+        console.log(res)
+        const coordinates = {
+          longitude: res.longitude,
+          latitude: res.latitude
+        }
+        wx.setStorageSync('userLocation', coordinates)
+      }
+    })
+
   },
 
   globalData: {
     userInfo: null,
     spaces: [],
-
+    userLocation:{},
     header: null,
     user: null,
 
-    // baseUrl: 'http://localhost:3000/api/v1'
-  baseUrl: 'https://gou-go.wogengapp.cn/api/v1'
+    baseUrl: 'http://localhost:3000/api/v1'
+  // baseUrl: 'https://gou-go.wogengapp.cn/api/v1'
 
   }
 

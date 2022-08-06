@@ -61,6 +61,9 @@ Page({
     let page = this;
     let header = wx.getStorageSync('header')
     let user_id = wx.getStorageSync('user').id
+    let picture_url = wx.getStorageSync('user').picture_url
+    let dog_name = wx.getStorageSync('user').dog_name
+    
     wx.request({
       url: `${app.globalData.baseUrl}/users/${user_id}/profile`,
       method: 'GET',
@@ -72,7 +75,9 @@ Page({
         // const spaces = res.data.spaces
         // Update local data
         page.setData({
-          spaces
+          spaces: spaces,
+          dog_name: dog_name,
+          picture_url: picture_url
         });
 
         wx.hideToast();
