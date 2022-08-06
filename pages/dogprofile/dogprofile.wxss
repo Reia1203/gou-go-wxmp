@@ -4,29 +4,35 @@
   height: 240rpx;
 }
 
-.category-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50rpx;
+  margin-bottom: 40rpx; 
 }
 
+.avatar-container{
+  margin-top: 10rpx;
+  margin-left:28rpx;
+}
+/* 
 .row-container {
   display: flex;
-}
+} */
 
 
-.paw-container {
+/* .paw-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
-}
+} */
 
 .dog-avatar {
   height: 180rpx;
   width: 180rpx;
-  margin: 25rpx 25rpx;
+  margin: 20rpx 20rpx;
+  border:rgba(0,0,0,0) 10rpx solid;
 }
 
 
@@ -74,3 +80,30 @@
 .mb {
   margin-bottom: 30rpx;
 }
+
+
+/* IMAGE STYLES */
+/* radio + image {
+  cursor: pointer;
+} */
+
+/* CHECKED STYLES */
+/* radio:checked + image {
+  outline: 2px solid #f00;
+} */
+
+radio {
+  visibility: hidden;
+  width:0;
+}
+
+.yellow-circle {
+  border: #F2DF3A 10rpx solid;
+  border-radius: 50%; 
+}
+
+image{
+  margin:0rpx;
+  padding: 0rpx;
+}
+
