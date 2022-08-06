@@ -84,13 +84,13 @@
   border-radius: 16rpx;
   background:#F2DF3A;
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
-  font-size: 30rpx;
+  font-size: 25rpx;
   transition: background 0.3s ease;
   font-weight: bolder;
-  width: 120rpx !important;
+  width: 80rpx !important;
   position: absolute;
-  right: 150rpx;
-  top: 1190rpx;
+  right: 180rpx;
+  bottom: 360rpx;
   z-index: 100;
 }
 

@@ -10,7 +10,7 @@
 }  */
 
 text, view{
-  color: #515151;
+  color:rgb(100, 100, 100);
 }
 @font-face {
   font-family: 'Pacifico-Regular';

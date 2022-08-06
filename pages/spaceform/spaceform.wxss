@@ -19,7 +19,7 @@
 }
 
 .btn-flat {
-  /* color: rgb(119, 119, 119); */
+  color: rgb(100, 100, 100);
   padding: 16rpx 48rpx;
   border-radius: 16rpx;
   background:#F2DF3A;
@@ -28,6 +28,7 @@
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   font-size: 42rpx;
   font-weight: bolder;
+
 }
 
 .btn-flat:hover {
@@ -65,18 +66,18 @@ image{
 }
 
 .btn-edit{
-  color: rgb(119, 119, 119);
+  color: rgb(100, 100, 100);
   padding: 12rpx 2rpx;
   border-radius: 16rpx;
   background:#F2DF3A;
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
-  font-size: 30rpx;
+  font-size: 25rpx;
   transition: background 0.3s ease;
   font-weight: bolder;
-  width: 120rpx !important;
+  width: 80rpx !important;
   position: absolute;
-  right: 150rpx;
-  bottom: -30rpx;
+  right: 186rpx;
+  bottom: -36rpx;
   z-index: 80;
 }
 
@@ -131,7 +132,7 @@ checkbox {
 }
 
 .form-intro {
-  margin: 40rpx;
+   margin-top: 40rpx; 
 }
 
 .bold-font {
