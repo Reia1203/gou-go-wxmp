@@ -51,7 +51,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 250rpx;
+  height: 290rpx;
   background: white;
   box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
   display: flex;
@@ -84,6 +84,9 @@
   opacity: .7;
   margin-bottom: 10rpx;
   margin-left: 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .card-product-infos {
@@ -130,4 +133,15 @@ height: 100%;
   .access-features {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .address-flex {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .grey-font {
+    color: #515151;
+    font-size: 28rpx;
   }

@@ -9,7 +9,7 @@
         {
           "name": "",
           "pathName": "pages/allReviews/allReviews",
-          "query": "id=101",
+          "query": "id=146",
           "launchMode": "default",
           "scene": null
         },
@@ -23,7 +23,7 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
-          "query": "id=111",
+          "query": "id=244",
           "launchMode": "default",
           "scene": null
         },
@@ -65,14 +65,18 @@
         {
           "name": "",
           "pathName": "pages/user/user",
+
+
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/user/user",
-          "query": "",
+
+          "pathName": "pages/category/category",
+          "query": "category=Restaurant",
+
           "launchMode": "default",
           "scene": null
         }

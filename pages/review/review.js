@@ -179,7 +179,7 @@ attached: function(){
           },
           fail(err) {
             console.log(err)
-            wx.switchTab({
+            wx.navigateTo({
               url: `../show/show?id=${id}`,
             })
           }
