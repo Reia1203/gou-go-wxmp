@@ -2,7 +2,6 @@
 <!--pages/post/post.wxml-->
 
 <navbar />
-
 <view class="top-margin"> </view>
   <view class="form-intro">
     <text class="bold-font">Add a Place</text>
@@ -11,7 +10,7 @@
 <view class="container-form">
 
  
-
+  <view wx:if="{{validationError}}">{{validationError.msg}}</view>
     <form bindsubmit="submit">
       <view class="page-section mb">
         <view class="page-section-title">Name:</view>

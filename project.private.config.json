@@ -62,12 +62,16 @@
           "launchMode": "default",
           "scene": null
         },
+<<<<<<< HEAD
         {
           "name": "",
           "pathName": "pages/user/user",
           "query": "",
           "launchMode": "default",
           "scene": null
+=======
+
+>>>>>>> 69e146b7d038b543ece88bc6277ea5593e01350f
         },
         {
           "name": "",
@@ -75,6 +79,7 @@
           "query": "category=Restaurant",
           "launchMode": "default",
           "scene": null
+
         }
       ]
     }

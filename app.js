@@ -28,7 +28,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     })
-
+  
     wx.getLocation({
       success(res){
         console.log("getting location")
@@ -40,9 +40,7 @@ App({
         wx.setStorageSync('userLocation', coordinates)
       }
     })
-
   },
-
   globalData: {
     userInfo: null,
     spaces: [],
@@ -54,5 +52,5 @@ App({
   // baseUrl: 'https://gou-go.wogengapp.cn/api/v1'
 
   }
-
-})
+}
+)
