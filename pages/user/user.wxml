@@ -4,9 +4,12 @@
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{!hasUserInfo}}">
-      <image class="userinfo-avatar" src="/image/avatar.svg"></image>
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
-      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button>
+      <image class="userinfo-avatar" src="{{picture_url}}"></image>
+      <view class="dog_name">
+        <text>{{dog_name}}</text>
+      </view>
+      <!-- <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> Login </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Login </button> -->
     </block> 
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -30,7 +33,8 @@
     <text class="yellow-btn">Read More</text>
   </view> -->
 
-
+<!-- {{picture_url}}
+{{dog_name}} -->
 <text class="bold-text">My Favorite Places</text>
 <view class="favorites-container">
   <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">

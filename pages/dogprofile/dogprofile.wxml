@@ -3,58 +3,24 @@
 
 <view class="top-margin"> </view>
 
-<view class="category-container">
-  <view class="row-container">
-    <view class="paw-container" bindtap="goToCategory">
-      <image src="/image/dog-avatar/dog1.png" class="dog-avatar" mode="aspectFit"  />
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog2.png" class="dog-avatar" mode="aspectFit"  />
-    </view>
-    <view class="paw-container" bindtap="goToCategory">
-      <image src="/image/dog-avatar/dog3.png" class="dog-avatar" mode="aspectFit" />
-    </view>
-  </view>
-  <view class="row-container">
-    <view class="paw-container" bindtap="goToCategory">
-      <image src="/image/dog-avatar/dog4.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog5.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog6.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-  </view>
-  <view class="row-container">
-    <view class="paw-container" bindtap="goToCategory">
-      <image src="/image/dog-avatar/dog7.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog8.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog9.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-  </view>
-  <view class="row-container">
-    <view class="paw-container" bindtap="goToCategory">
-      <image src="/image/dog-avatar/dog10.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/dog-avatar/dog11.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-    <view class="paw-container" bindtap="goToCategory" >
-      <image src="/image/plus-select.png" class="dog-avatar" mode="aspectFit"/>
-    </view>
-  </view>
+<view class="container">
+
+
 
   <form bindsubmit="submit">
-      <view class="page-section mb">
-        <view class="page-section-title">Puppy's Name:</view>
-          <input class="weui-input" name="name" placeholder="" />
-      </view>
+    <view class="avatar-container">
+      <radio-group bindchange="radioChange" name="picture_url">
+        <label wx:for="{{pictures}}" wx:for-item="picture">
+          <radio value="{{picture.url}}"/>
+          <image src="{{picture.url}}" class="dog-avatar {{picture.checked === true ? 'yellow-circle': ''}}" mode="aspectFit"  />
+        </label>
+      </radio-group>
+    </view>
+    <view class="page-section mb">
+        <view class="page-section-title">Dog's Name:</view>
+          <input class="weui-input" name="dog_name" placeholder="" />
+    </view>
 
-      <button form-type="submit" class="btn-flat">Save</button>
+    <button form-type="submit" class="btn-flat">Save</button>
   </form>
 </view>
