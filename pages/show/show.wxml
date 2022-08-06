@@ -19,7 +19,10 @@
           <text class="bold-font space_name">{{space.name}}</text>
           <text class="space-text" >{{space.address}}</text>
         </view>
+        <view>
           <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
+          <view>{{distance}} km</view>
+        </view>
       </view>
       <view class="features-text">
         <text class="feature">{{space.category}}</text>
@@ -38,7 +41,7 @@
         </view>
       </view>
     </view>
-    {{distance}} km away
+    
 </view>
 
 </view>

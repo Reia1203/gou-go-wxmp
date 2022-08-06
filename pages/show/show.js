@@ -61,7 +61,7 @@ Page({
       header,
       success(res) {
         const userLocation = wx.getStorageSync('userLocation')
-        const distance = page.calculateDistance(userLocation.longitude, userLocation.latitude, res.data.space.longitude, res.data.space.latitude).toFixed(2)  // TODO(chengjie): switch map long & lad in arguments once the db is updated
+        const distance = page.calculateDistance(userLocation.latitude, userLocation.longitude, res.data.space.latitude, res.data.space.longitude).toFixed(2)  // TODO(chengjie): switch map long & lad in arguments once the db is updated
         page.setData({ space: res.data.space, distance: distance })
 
         console.log(page.data.space)

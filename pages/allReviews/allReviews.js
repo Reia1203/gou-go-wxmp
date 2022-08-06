@@ -76,6 +76,8 @@ Page({
       header,
       success(res) {
         page.setData({ reviews: res.data.reviews })
+        // let {reviews} = res.data.reviews;
+        // reviews = reviews.sort((s) => s.date.strptime(s, '%d/%m/%Y').reverse)
       }
     })
   },

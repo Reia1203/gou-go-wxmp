@@ -23,7 +23,7 @@
         {
           "name": "show",
           "pathName": "pages/show/show",
-          "query": "id=111",
+          "query": "id=244",
           "launchMode": "default",
           "scene": null
         },
