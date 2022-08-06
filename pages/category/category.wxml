@@ -16,6 +16,7 @@
       <view class="h2">{{space.name}}</view>
       
       <view class="p">{{space.address}}</view>
+      {{space.distance}} km away
     </view>
       <view class="features-text">
           <text class="feature">{{space.category}}</text>
