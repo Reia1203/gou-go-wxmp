@@ -116,6 +116,9 @@ button {
   opacity: .7;
   margin-bottom: 10rpx;
   margin-left: 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .card-product-infos {

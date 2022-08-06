@@ -19,7 +19,6 @@ Page({
     let header = wx.getStorageSync('header')
     wx.request({
       url: `${app.globalData.baseUrl}/spaces`,
-      // url: "https://rent-a-pet-chelsea-holman.herokuapp.com/api/v1/pets",
       method: 'GET',
       header: header,
 
