@@ -128,9 +128,11 @@ Page({
       method: 'POST',
       header,
       success(res) {
-        const data = page.data
-        data.space.favorited = res.data.space.favorited
-        page.setData(data)
+        // const data = page.data
+        // data.space.favorited = res.data.space.favorited
+        // page.setData(data)
+        console.log(res.data.space.favorited)
+        page.setData({ 'space.favorited': res.data.space.favorited })
       }
     })
   }, 
