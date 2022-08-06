@@ -6,6 +6,7 @@
 
 <view wx:for="{{reviews}}" wx:for-item="review"  class="review-card" wx:key="unique">
   <view class="review-preview">
+    
     <image src="/image/dog.svg" class="review-img"></image>
     <view class="review-text">
       <text class="review-name">Shanghai Dog</text>

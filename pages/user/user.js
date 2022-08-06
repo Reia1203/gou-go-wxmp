@@ -125,4 +125,11 @@ Page({
       url: `../show/show?id=${id}`,
     })
   },
+
+  goToDogProfile(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../dogprofile/dogprofile`,
+    })
+  }
 })
