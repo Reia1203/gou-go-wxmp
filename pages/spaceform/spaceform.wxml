@@ -3,12 +3,12 @@
 
 <navbar />
 <view class="top-margin"> </view>
+
+<view class="container-form">
   <view class="form-intro">
     <text class="bold-font">Add a Place</text>
     <text class="intro-text">Found a paw-friendly place that isn't on Gou-Go? Add it here so other good boys and girls can visit, too! </text>
   </view>
-<view class="container-form">
-
  
   <view wx:if="{{validationError}}">{{validationError.msg}}</view>
     <form bindsubmit="submit">
@@ -61,7 +61,7 @@
         <button bindtap="uploadImage" class="btn-edit">Edit</button>     
   </view>
 
-      <button form-type="submit" class="btn-flat">Save</button>
+      <button form-type="submit" class="btn-flat">Submit</button>
     </form>
 </view>
 
