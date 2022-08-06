@@ -128,7 +128,9 @@ Page({
       method: 'POST',
       header,
       success(res) {
-        page.setData(res.data)
+        const data = page.data
+        data.space.favorited = res.data.space.favorited
+        page.setData(data)
       }
     })
   }, 
@@ -145,6 +147,7 @@ Page({
     // wx.getLocation({ //获取当前经纬度
     //   type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
     //   success: function (res) {
+    console.log(space)
         wx.openLocation({ //​使用微信内置地图查看位置。
           latitude: space.latitude, //要去的纬度-地址
           longitude: space.longitude, //要去的经度-地址

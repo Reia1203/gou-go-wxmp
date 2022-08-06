@@ -136,7 +136,9 @@ Page({
        console.log(res)
        if(res.address!=''){
          page.setData({
-           address:res.address
+           address:res.address,
+           latitude:res.latitude,
+           longitude:res.longitude
           })
        }
      }
@@ -191,6 +193,7 @@ Page({
     let page = this;
     const id = e.currentTarget.dataset.id;
     const d = this.data
+    console.log(d)
     let data = e.detail.value
     // multiindex:  [1, 0] 
     // data.categories = d.multiIndex
@@ -207,7 +210,15 @@ Page({
       url: `${app.globalData.baseUrl}/spaces`,
       method:'POST',
       header,
-      data: data,
+      data: {
+        address: e.detail.value.address,
+        category: e.detail.value.category,
+        features: e.detail.value.features,
+        name: e.detail.value.name,
+        sub_category: e.detail.value.sub_category,
+        latitude: this.data.latitude,
+        longitude: this.data.longitude
+      },
       success(res){
         console.log(res)
         // wx.switchTab({
