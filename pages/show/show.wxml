@@ -17,6 +17,7 @@
       <view class="map-flex">
         <view>
           <text class="bold-font space_name">{{space.name}}</text>
+          <text>{{}}</text>
           <text class="space-text" >{{space.address}}</text>
         </view>
         <view>
@@ -30,7 +31,7 @@
 
         
         <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-        <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique" class="access-feature">
+        <block wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique" class="access-feature">
           <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
           <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
           </text>
@@ -38,7 +39,7 @@
           </text>
           <text wx:if="{{feature === 'dog_food'}}" class="feature">Food provided
           </text>
-        </view>
+        </block>
       </view>
     </view>
     

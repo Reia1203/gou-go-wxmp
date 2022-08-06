@@ -75,9 +75,11 @@ Page({
       method: 'GET',
       header,
       success(res) {
-        page.setData({ reviews: res.data.reviews })
-        // let {reviews} = res.data.reviews;
-        // reviews = reviews.sort((s) => s.date.strptime(s, '%d/%m/%Y').reverse)
+        // let {reviews} = res.data.reviews
+        // reviews = reviews.sort((s) => s.created_at.reverse)
+        page.setData({ 
+          reviews: res.data.reviews 
+        })
       }
     })
   },
