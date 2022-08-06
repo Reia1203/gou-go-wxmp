@@ -54,6 +54,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/dogprofile/dogprofile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/map/map",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
