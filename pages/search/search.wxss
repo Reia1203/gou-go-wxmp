@@ -39,50 +39,7 @@
   background-color: #F9F9F9;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 240rpx;
-  background: white;
-  box-shadow: 0 0 30rpx rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin: 20rpx;
-  border-radius: 10rpx;
-}
 
-.card-product image {
-  height: 100%;
-  width: 240rpx !important;
-  object-fit: cover;
-}
-
-.card-product .h2 {
-  font-size: 40rpx;
-  font-weight: bold;
-  margin: 10rpx 0;
-}
-
-.card-product .p {
-  font-size: 30rpx;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  /* margin-top: 10rpx; */
-}
-
-.category-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  text-align: center;
-  font-size: 40rpx;
-  margin-top: 20rpx;
-}
-
-.card-product .card-product-infos {
-  padding: 38rpx;
-}
 
 
 .reg-text {
@@ -98,4 +55,74 @@
 .top-margin {
   height: 250rpx;
 }
+
+.card-product {
+  overflow: hidden;
+  height: 250rpx;
+  background: white;
+  box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
+  display: flex;
+  margin: 20rpx 40rpx;
+  border-radius: 10rpx;
+}
+
+.card-product image {
+  height: 100%;
+  width: 240rpx !important;
+  object-fit: cover;
+}
+.name-container {
+  position: relative;
+  width: 60%;
+  height: 100%;
+}
+.card-product .h2 {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 20rpx 20rpx 0 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.card-product .p {
+  font-size: 28rpx;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+}
+
+.card-product-infos {
+  /* padding: 5rpx 20rpx 20rpx 20rpx; */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
+  
+}
+
+.features-text-small {
+  /* margin: 30rpx 0; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.feature-small {
+  border: 2px solid #F2DF3A;
+  padding: 5rpx 10rpx;
+  border-radius: 25rpx;
+  /* margin: 40rpx 20rpx 40rpx 0; */
+  
+  
+  }
+
+  .access-features {
+    display: flex;
+    flex-wrap: wrap;
+  }
 

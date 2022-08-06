@@ -4,7 +4,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 50rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #9E9E9E;
 }
+
+
 
 .row-container {
   display: flex;
@@ -23,6 +27,13 @@
   height: 100rpx;
   width: 100rpx;
   margin: 10rpx 65rpx;
+}
+
+.landing-text {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0 0 50rpx 40rpx;
+  display: block;
 }
 
 .card {
@@ -62,14 +73,17 @@
   font-size: 40rpx;
   font-weight: bold;
   margin: 20rpx 20rpx 0 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .card-product .p {
   font-size: 28rpx;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 20rpx;
-  /* margin-top: 10rpx; */
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
 }
 
 .card-product-infos {
@@ -99,6 +113,8 @@ height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 15rpx;
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
 
 }
 
@@ -109,4 +125,9 @@ height: 100%;
   /* margin: 40rpx 20rpx 40rpx 0; */
   
   
+  }
+
+  .access-features {
+    display: flex;
+    flex-wrap: wrap;
   }

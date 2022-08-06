@@ -163,21 +163,24 @@ attached: function(){
           header: header,
           success(res) {
             console.log('this is for upload file', res)
-            wx.showModal({
-              showCancel: false,
-              title: 'Thank you',
-              content: 'Your submission is under review.',
-              success(res) {
-                wx.navigateTo({
-                  url: `../show/show?id=${id}`,
-                })
-              }
-            })
+            wx.navigateTo({
+                    url: `../show/show?id=${id}`,
+                  })
+            // wx.showModal({
+            //   showCancel: false,
+            //   title: 'Thank you',
+            //   content: 'Your submission is under review.',
+            //   success(res) {
+            //     wx.navigateTo({
+            //       url: `../show/show?id=${id}`,
+            //     })
+            //   }
+            // })
           },
           fail(err) {
             console.log(err)
             wx.switchTab({
-              url: `../landing/landing`,
+              url: `../show/show?id=${id}`,
             })
           }
         })

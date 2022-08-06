@@ -47,7 +47,7 @@ Page({
       setTimeout(() => {
         this.setData({animation: true})
       }, 
-      2000)  
+      10)  
 
       
   },
