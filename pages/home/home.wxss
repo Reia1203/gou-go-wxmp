@@ -17,11 +17,12 @@
 }
 
 .home-bold {
+  margin: 90rpx 0;
   font-size: 55rpx;
   font-weight: bold;
   color: #0078AA;
   /* color: #B667F1; */
-  margin-bottom: 90rpx;
+
   
 }
 

@@ -12,7 +12,9 @@
       <text class="review-date">{{review.date}}</text>
       <text class="review-date">Paw-friendly rating: {{review.rating}}/5</text>
       
+      
       <text class="review-comment">"{{review.comment}}"</text>
+      <image class="review-img-large" wx:if="{{review.image !== null}}" src="{{review.image}}" mode="aspectFill"></image>
   </view>
 </view>
 </view>

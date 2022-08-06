@@ -33,15 +33,33 @@
 
 <text class="bold-text">My Favorite Places</text>
 <view class="favorites-container">
-      <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-    <image src="{{ space.image }}" class="space-img" mode="aspectFill">
-    </image>
+  <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
+  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  </image>
+  <view class="name-container">
+    
     <view class="card-product-infos">
+    <view>
       <view class="h2">{{space.name}}</view>
-      <view class="p">Dogs allowed: {{space.access}}</view>
+      
+      <view class="p">{{space.address}}</view>
+    </view>
+      <view class="features-text">
+          <text class="feature">{{space.category}}</text>
+          <text wx:if="{{space.category === 'Restaurant'}}" class="feature" >{{space.sub_category}} </text>
+
+          <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
+          <view class="access-features" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+            <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
+            <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
+            </text>
+
+          </view>
+        </view>
       <!-- <view class="p">{{space.features}}</view> -->
   </view>
-  </view>
+</view>
+</view>
     <!-- <text class="yellow-btn">See More</text> -->
   </view>
 </view>

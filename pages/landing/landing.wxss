@@ -4,7 +4,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 50rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #9E9E9E;
 }
+
+
 
 .row-container {
   display: flex;
@@ -25,6 +29,13 @@
   margin: 10rpx 65rpx;
 }
 
+.landing-text {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0 0 50rpx 40rpx;
+  display: block;
+}
+
 .card {
   margin: 30rpx;
   border: .6rpx solid rgba(0,0,0,0.3);
@@ -40,7 +51,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 250rpx;
+  height: 290rpx;
   background: white;
   box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
   display: flex;
@@ -55,23 +66,35 @@
 }
 .name-container {
   position: relative;
+  width: 60%;
+  height: 100%;
 }
 .card-product .h2 {
   font-size: 40rpx;
   font-weight: bold;
   margin: 20rpx 20rpx 0 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .card-product .p {
   font-size: 28rpx;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 20rpx;
-  /* margin-top: 10rpx; */
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
-.card-product .card-product-infos {
-  padding: 5rpx 20rpx 20rpx 20rpx;
+.card-product-infos {
+  /* padding: 5rpx 20rpx 20rpx 20rpx; */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
   
 }
 
@@ -88,17 +111,26 @@
   font-family:'Raleway';
   font-weight: bold;
 }
-.feaures-text {
-  margin: 30rpx 0;
-
+.features-text {
+  /* margin: 30rpx 0; */
   display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
+
 }
 
 .feature {
   border: 2px solid #F2DF3A;
   padding: 5rpx 10rpx;
   border-radius: 25rpx;
-  margin: 40rpx 20rpx 40rpx 0;
+  /* margin: 40rpx 20rpx 40rpx 0; */
   
   
+  }
+
+  .access-features {
+    display: flex;
+    flex-wrap: wrap;
   }

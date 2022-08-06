@@ -41,7 +41,17 @@ Page({
     //   }
     // });
   },
-
+  calculateDistance: function (lat1, lng1, lat2, lng2) {
+    console.log(lat1, lng1, lat2, lng2)
+    var radLat1 = lat1 * Math.PI / 180.0;
+    var radLat2 = lat2 * Math.PI / 180.0;
+    var a = radLat1 - radLat2;
+    var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+    s = s * 6378.137;
+    s = Math.round(s * 10000) / 10000;
+    return s
+  },
   getSpace(id) {
     const page = this;
     let header = wx.getStorageSync('header')
@@ -50,11 +60,14 @@ Page({
       method: 'GET',
       header,
       success(res) {
-        page.setData({ space: res.data.space })
+        const userLocation = wx.getStorageSync('userLocation')
+        const distance = page.calculateDistance(userLocation.longitude, userLocation.latitude, res.data.space.longitude, res.data.space.latitude).toFixed(2)  // TODO(chengjie): switch map long & lad in arguments once the db is updated
+        page.setData({ space: res.data.space, distance: distance })
+
+        console.log(page.data.space)
       }
     })
   },
-
   getFeatureReview(id) {
     const page = this;
     let header = wx.getStorageSync('header')
@@ -128,7 +141,11 @@ Page({
       method: 'POST',
       header,
       success(res) {
-        page.setData(res.data)
+        // const data = page.data
+        // data.space.favorited = res.data.space.favorited
+        // page.setData(data)
+        console.log(res.data.space.favorited)
+        page.setData({ 'space.favorited': res.data.space.favorited })
       }
     })
   }, 
@@ -145,6 +162,7 @@ Page({
     // wx.getLocation({ //获取当前经纬度
     //   type: 'wgs84', //返回可以用于wx.openLocation的经纬度，
     //   success: function (res) {
+    console.log(space)
         wx.openLocation({ //​使用微信内置地图查看位置。
           latitude: space.latitude, //要去的纬度-地址
           longitude: space.longitude, //要去的经度-地址

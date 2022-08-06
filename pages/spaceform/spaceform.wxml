@@ -4,11 +4,12 @@
 <navbar />
 
 <view class="top-margin"> </view>
-<view class="container-form">
-  <view class="contain">
-        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
-        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
+  <view class="form-intro">
+    <text class="bold-font">Add a Place</text>
+    <text class="intro-text">Found a paw-friendly place that isn't on Gou-Go? Add it here so other good boys and girls can visit, too! </text>
   </view>
+<view class="container-form">
+
  
 
     <form bindsubmit="submit">
@@ -55,6 +56,11 @@
             </view>
           </picker>
       </view>
+
+      <view class="contain">
+        <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
+        <button bindtap="uploadImage" class="btn-edit">Edit</button>     
+  </view>
 
       <button form-type="submit" class="btn-flat">Save</button>
     </form>

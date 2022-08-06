@@ -14,14 +14,20 @@
   </view>
   <view class="space-info">
     <view>
-        <text class="bold-font space_name">{{space.name}}</text>
-        <text class="space-text" >{{space.address}}</text>
+      <view class="map-flex">
+        <view>
+          <text class="bold-font space_name">{{space.name}}</text>
+          <text class="space-text" >{{space.address}}</text>
+        </view>
+          <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
+      </view>
       <view class="features-text">
         <text class="feature">{{space.category}}</text>
-        <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text>
+        <text wx:if="{{space.category === 'Restaurant'}}" class="feature-small" >{{space.sub_category}} </text>
 
+        
         <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-        <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+        <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique" class="access-feature">
           <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
           <text wx:if="{{feature === 'outdoor'}}" class="feature">Outdoors
           </text>
@@ -32,7 +38,7 @@
         </view>
       </view>
     </view>
-    <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
+    {{distance}} km away
 </view>
 
 </view>
@@ -43,7 +49,7 @@
 <view class="review-container">
   <view class="review-top">
     <text class="bold-font">Reviews</text>
-    <image src="/image/plus-select.png" bindtap="addReview" data-id="{{space.id}}"></image>
+    
   </view>
   <view class="review-preview">
     <image src="/image/dog.svg" class="review-img"></image>
@@ -53,12 +59,15 @@
       <text class="review-date">Paw-friendly rating: {{space.featured_review.rating}}/5</text>
       
       <text class="review-comment">"{{space.featured_review.comment}}"</text>
-  </view>
-
-    <view class="read-btn">
+      <view class="read-btn">
       <view class="yellow-btn" bindtap="seeAllReviews" data-id="{{space.id}}">Read
       More</view>
   </view>
+
+   
+    
+  </view>
+  <image  class="add-review" src="/image/plus-select.png" bindtap="addReview" data-id="{{space.id}}"></image>
  
    
   </view>
@@ -70,9 +79,9 @@
   <view class="review-container">
     <text class="bold-font">Reviews</text>
     <text>Be the first to leave a paw of approval for {{space.name}}.</text>
-    <view class="add-review">
-      <image src="/image/plus-select.png" bindtap="addReview" data-id="{{space.id}}"></image>
-    </view>
+    
+      <image class="first-review" src="/image/plus-select.png" bindtap="addReview" data-id="{{space.id}}"></image>
+    
   </view>
 </view>
 
@@ -80,24 +89,26 @@
 
 <view class="rec-container">
   <text class="bold-font">Other Recommendations</text>
-
   <view wx:for="{{space.recommended_spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
   <image src="{{ space.image }}" class="space-img" mode="aspectFill">
   </image>
   <view class="name-container">
-    <view class="h2">{{space.name}}</view>
+    
     <view class="card-product-infos">
-
+    <view>
+      <view class="h2">{{space.name}}</view>
       
       <view class="p">{{space.address}}</view>
-      <view class="features-card-text">
-          <text class="feature-card">{{space.category}}</text>
-          <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature-card">{{space.sub_category}} </text>
+    </view>
+      <view class="features-text-small">
+          <text class="feature-small">{{space.category}}</text>
+          <text wx:if="{{space.sub_category !== null}}" class="feature-small" >{{space.sub_category}}</text>
+          <!-- <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature-small" >{{space.sub_category}} </text> -->
 
           <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-          <view wx:for="{{space.features}}" wx:for-item="feature-card" wx:key="unique">
-            <text wx:if="{{feature === 'indoor'}}" class="feature-card">Indoors</text>
-            <text wx:if="{{feature === 'outdoor'}}" class="feature-card">Outdoors
+          <view class= "access-feature" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+            <text wx:if="{{feature === 'indoor'}}" class="feature-small">Indoors</text>
+            <text wx:if="{{feature === 'outdoor'}}" class="feature-small">Outdoors
             </text>
 
           </view>
@@ -106,6 +117,7 @@
   </view>
 </view>
 </view>
+
 </view>
 
 <view class="bottom-margin"> </view>
