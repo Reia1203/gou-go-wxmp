@@ -65,18 +65,21 @@
         {
           "name": "",
           "pathName": "pages/user/user",
-
-
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-
           "pathName": "pages/category/category",
           "query": "category=Restaurant",
-
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/spaceform/spaceform",
+          "query": "",
           "launchMode": "default",
           "scene": null
         }
