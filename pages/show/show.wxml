@@ -17,7 +17,6 @@
       <view class="map-flex">
         <view>
           <text class="bold-font space_name">{{space.name}}</text>
-          <text>{{}}</text>
           <text class="space-text" >{{space.address}}</text>
         </view>
         <view>
@@ -46,6 +45,10 @@
 </view>
 
 </view>
+
+<!-- <view wx:if="{{space.review_avg >= 3}}">I am bigger than 3!</view>
+<view wx:if="{{space.review_avg <= 3}}">I am less than 3!</view> -->
+
 
 <text class="horizontal-line"></text>
 

@@ -186,6 +186,24 @@ Page({
     console.log(data.multiIndex);
     this.setData(data);
   },
+  validateForm(formData){
+    const Validator = require('../../libs/validator.js');
+    let rules = { 
+      name: [{message: 'Please enter the name', required: true }],
+      address: [{message: 'Please enter the address', required: true }]
+    }
+    let validator = new Validator(rules);
+    let error = validator.validate(formData);
+    if (error) {
+      console.log('validationfailed');
+      console.log(error);
+      this.setData({validationError: error})
+      return false
+    } else {
+      console.log('validationsuccessful');
+      return true
+    }
+  },
 
   submit(e) {
     console.log(e);
@@ -195,64 +213,70 @@ Page({
     const d = this.data
     console.log(d)
     let data = e.detail.value
-    // multiindex:  [1, 0] 
-    // data.categories = d.multiIndex
-    // multiArray = [restaurant bars], [american chinese ...]
-    data.category = d.multiArray[0][d.multiIndex[0]]
-    // subCategory = [american, buffet, chines...] , [all bars], [all cafes]
-    data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
-    console.log(1111, data)
-    getApp().globalData.spaces.push(data);
-
-    let header = wx.getStorageSync('header')
-    wx.request({
+    let validData = this.validateForm(data)
+    if(validData){
       
-      url: `${app.globalData.baseUrl}/spaces`,
-      method:'POST',
-      header,
-      data: {
-        address: e.detail.value.address,
-        category: e.detail.value.category,
-        features: e.detail.value.features,
-        name: e.detail.value.name,
-        sub_category: e.detail.value.sub_category,
-        latitude: this.data.latitude,
-        longitude: this.data.longitude
-      },
-      success(res){
-        console.log(res)
-        // wx.switchTab({
-        //   url: `../landing/landing`,
-        // })
-        wx.uploadFile({
-          url: `${url}/spaces/${res.data.space.id}/upload`,
-          filePath: page.data.image_url[0],
-          name: 'file',
-          header: header,
-          success(res) {
-            console.log('this is for upload file', res)
-            wx.showModal({
-              showCancel: false,
-              title: 'Thank you',
-              content: 'Your submission is under review.',
+      // multiindex:  [1, 0] 
+      // data.categories = d.multiIndex
+      // multiArray = [restaurant bars], [american chinese ...]
+      data.category = d.multiArray[0][d.multiIndex[0]]
+      // subCategory = [american, buffet, chines...] , [all bars], [all cafes]
+      data.sub_category = d.subCategoryArray[d.multiIndex[0]][d.multiIndex[1]]
+      console.log(1111, data)
+      getApp().globalData.spaces.push(data);
+      
+      let header = wx.getStorageSync('header')
+      wx.request({
+        
+        url: `${app.globalData.baseUrl}/spaces`,
+        method:'POST',
+        header,
+        data: {
+          address: e.detail.value.address,
+          category: e.detail.value.category,
+          features: e.detail.value.features,
+          name: e.detail.value.name,
+          sub_category: e.detail.value.sub_category,
+          latitude: this.data.latitude,
+          longitude: this.data.longitude
+        },
+        success(res){
+          console.log(res)
+          // wx.switchTab({
+            //   url: `../landing/landing`,
+            // })
+            wx.uploadFile({
+              url: `${url}/spaces/${res.data.space.id}/upload`,
+              filePath: page.data.image_url[0],
+              name: 'file',
+              header: header,
               success(res) {
+                console.log('this is for upload file', res)
+                wx.showModal({
+                  showCancel: false,
+                  title: 'Thank you',
+                  content: 'Your submission is under review.',
+                  success(res) {
+                    wx.switchTab({
+                      url: `../landing/landing`,
+                    })
+                  }
+                })
+              },
+              fail(err) {
+                console.log(err)
                 wx.switchTab({
                   url: `../landing/landing`,
                 })
               }
             })
-          },
-          fail(err) {
-            console.log(err)
-            wx.switchTab({
-              url: `../landing/landing`,
-            })
-          }
-        })
-        
+            
+          
      }
    })
-
+  } else {
+    console.log("INVALID")
+  }
 
 
   },

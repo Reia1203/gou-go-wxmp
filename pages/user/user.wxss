@@ -51,7 +51,7 @@
 .yellow-btn {
   background-color: #F2DF3A;
   width: 200rpx;
-  height: 50rpx;
+  height: 150rpx;
   padding: 12px 20px;
   font-weight: bold;
   border-radius: 5rpx;
