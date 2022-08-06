@@ -44,8 +44,10 @@
     <view>
       <view class="h2">{{space.name}}</view>
       
-      <view class="p">{{space.address}}</view>
-      {{space.distance}} km away
+      <view class="address-flex">
+        <text class="p">{{space.address}}</text>
+        <view class="grey-font">{{space.distance}} km</view>
+    </view>
     </view>
       <view class="features-text">
           <text class="feature">{{space.category}}</text>

@@ -9,7 +9,7 @@
   font-weight: bold;
   font-size: 40rpx;
   display: block;
-  margin-bottom: 30rpx;
+  margin-bottom: 40rpx;
 }
 
 .space_name {
@@ -132,7 +132,7 @@ border-radius: 25rpx;
 .map-icon {
   width: 100rpx !important;
   height: 100rpx !important;
-  margin-top: 40rpx;
+  margin-top: 25rpx;
 }
 
 .heart-icon {
