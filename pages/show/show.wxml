@@ -26,7 +26,7 @@
         <text wx:if="{{space.sub_category !== null}}" class="feature" class="feature" >{{space.sub_category}}</text>
         <!-- <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature" class="feature">{{space.sub_category}} </text> -->
 
-
+        
         <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
         <view wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique" class="access-feature">
           <text wx:if="{{feature === 'indoor'}}" class="feature">Indoors</text>
@@ -39,7 +39,7 @@
         </view>
       </view>
     </view>
-    
+    {{distance}} km away
 </view>
 
 </view>
