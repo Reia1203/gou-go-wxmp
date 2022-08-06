@@ -22,7 +22,7 @@ Page({
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Restaurant', 'Bars','Cafes','Parks','Vets','Other'], 
-      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican','Thai']
+      ['American','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican', 'Spanish', 'Thai', 'Western']
     ],
     // objectMultiArray: [
     //   [
