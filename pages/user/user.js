@@ -10,21 +10,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
-    dog_name:'',
-    pictures: [
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog1.png", checked: true},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog2.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog3.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog4.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog5.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog6.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog7.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog8.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog9.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog10.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog11.png"},
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog12.png"}
-    ]
+
+    
   },
   onLoad() {
     if (wx.getUserProfile) {
