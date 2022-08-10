@@ -9,6 +9,7 @@
 
   <form bindsubmit="submit">
     <view class="avatar-container">
+      <view class="page-section-title ml">Select your profile picture:</view>
       <radio-group bindchange="radioChange" name="picture_url">
         <label wx:for="{{pictures}}" wx:for-item="picture">
           <radio value="{{picture.url}}"/>

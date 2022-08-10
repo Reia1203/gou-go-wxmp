@@ -7,9 +7,9 @@ Page({
    */
   data: {
     image_url:["../../image/placeholder.png"],
-    fullBoneUrl:'/image/bone-full2.svg',
-    halfBoneUrl:'/image/bone-half.svg',
-    nullBoneUrl:'/image/bone-empty.svg',
+    fullBoneUrl:'/image/full-paw.svg',
+    halfBoneUrl:'/image/half-paw.svg',
+    nullBoneUrl:'/image/empty-paw.svg',
     score:0,
     rate:2,
     boneX:0,

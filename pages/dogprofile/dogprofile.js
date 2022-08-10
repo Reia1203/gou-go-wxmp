@@ -8,7 +8,7 @@ Page({
   data: {
     dog_name:'',
     pictures: [
-      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog1.png", checked: true},
+      {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog1.png"},
       {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog2.png"},
       {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog3.png"},
       {url: "https://dog-avatar.oss-cn-shanghai.aliyuncs.com/dog4.png"},
@@ -55,6 +55,7 @@ Page({
         wx.setStorageSync('user', res.data)
       }
     })
+
   },
 
   /**

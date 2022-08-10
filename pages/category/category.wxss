@@ -103,3 +103,9 @@ height: 100%;
     color: #515151;
     font-size: 28rpx;
   }
+
+  .category-text {
+    margin: 0 40rpx 40rpx 40rpx;
+    display: block;
+    font-size: 35rpx;
+  }

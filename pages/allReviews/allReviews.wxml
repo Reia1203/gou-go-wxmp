@@ -6,15 +6,26 @@
 
 <view wx:for="{{reviews}}" wx:for-item="review"  class="review-card" wx:key="unique">
   <view class="review-preview">
-    
+    <block wx:if="{{!review.user.picture_url}}">
     <image src="/image/dog.svg" class="review-img"></image>
+    </block>
+    <block wx:if="{{review.user.picture_url}}">
+    <image src="{{review.user.picture_url}}" class="review-img"></image>
+    </block>
     <view class="review-text">
-      <text class="review-name">Shanghai Dog</text>
+      <block wx:if="{{!review.user.dog_name}}">
+        <text class="review-name">Shanghai Dog</text>
+      </block>
+      <block wx:if="{{review.user.dog_name}}">
+        <text class="review-name">{{review.user.dog_name}}</text>
+      </block>
+      
       <text class="review-date">{{review.date}}</text>
       <text class="review-date">Paw-friendly rating: {{review.rating}}/5</text>
       
       
-      <text class="review-comment">"{{review.comment}}"</text>
+      <text class="review-comment" wx:if="{{!review.comment}}">"Woof woof! I was too busy having a paw-some time to fill out a review!"</text>
+      <text class="review-comment" wx:if="{{review.comment}}">"{{review.comment}}"</text>
       <image class="review-img-large" wx:if="{{review.image !== null}}" src="{{review.image}}" mode="aspectFill"></image>
   </view>
 </view>

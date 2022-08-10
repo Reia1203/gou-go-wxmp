@@ -10,7 +10,21 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
-    animation: false
+    animation: false, 
+    imgUrls: [
+      '/image/hero-img-1.jpg',
+      '/image/hero-img-3.png',
+      '/image/hero-img-2.png',
+      '/image/hero-img-4.jpg',
+      '/image/hero-img-5.jpg',
+
+    ],
+    indicatorDots: false,  //Whether to display panel indicator points
+    autoplay: true,      //Whether to automatically switch
+    interval: 3000,       //Automatically switch time interval
+    duration: 1000,       //Slide animation duration
+    inputShowed: false,
+    inputVal: ""
   },
 
   /**

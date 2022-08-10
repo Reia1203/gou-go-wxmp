@@ -24,8 +24,8 @@
 }
 
 .paw-icon {
-  height: 100rpx;
-  width: 100rpx;
+  height: 120rpx;
+  width: 120rpx;
   margin: 10rpx 65rpx;
 }
 
@@ -51,7 +51,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 290rpx;
+  height: 280rpx;
   background: white;
   box-shadow: 0 0 15rpx rgba(0,0,0,0.1);
   display: flex;
@@ -84,6 +84,8 @@
   opacity: .7;
   margin-bottom: 10rpx;
   margin-left: 20rpx;
+  /* margin-right: 40rpx; */
+  width: 65%;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;

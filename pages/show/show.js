@@ -68,6 +68,21 @@ Page({
       }
     })
   },
+  getUserInfo(id) {
+    const page = this;
+    let header = wx.getStorageSync('header')
+    wx.request({
+      url: `${app.globalData.baseUrl}/users/${id}`,
+      method: 'GET',
+      header,
+      success(res) {
+        console.log(page.data)
+        // page.setData({ space: res.data.space, distance: distance })
+
+        
+      }
+    })
+  },
   getFeatureReview(id) {
     const page = this;
     let header = wx.getStorageSync('header')

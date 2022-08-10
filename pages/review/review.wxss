@@ -46,7 +46,8 @@
   border: 2rpx solid #c2bfbf;
   border-radius: 8rpx;
   padding:20rpx;
-  margin: 30rpx 1rpx;
+  margin: 30rpx 40rpx 30rpx 0;
+  width:93%;
 }
 
 .container{

@@ -145,3 +145,10 @@ checkbox {
 .intro-text {
   font: 45rpx;
 }
+
+.error-msg {
+  margin-top: 60rpx;
+  color: rgb(158, 2, 2);
+  font-size: 35rpx;
+  font-weight: bold;
+}

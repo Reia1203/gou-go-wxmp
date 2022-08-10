@@ -8,7 +8,7 @@
   height: 300rpx;
   /* width: 90%; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .userinfo-avatar {
@@ -65,18 +65,12 @@
 }
 
 .top-margin {
-  height: 200rpx;
+  height: 210rpx;
 }
 
 
 
-.bottom-margin {
-  height: 230rpx;
-}
 
-.top-margin {
-  height: 200rpx;
-}
 
 /* button {
   background-color: #0078AA;
@@ -161,6 +155,121 @@ height: 100%;
     font-size: 50rpx;
     font-weight: bold;
     margin: 10rpx; 
-    width: 60%;
+    width: 100%;
     word-wrap: break-word;
   }
+
+  .avatar-container{
+    margin-top: 10rpx;
+    margin-left:28rpx;
+  }
+
+  .dog-avatar {
+    height: 180rpx;
+    width: 180rpx;
+    margin: 20rpx 20rpx;
+    border:rgba(0,0,0,0) 10rpx solid;
+  }
+
+  .weui-input{
+    height: 66rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
+    border: 1rpx solid #c2bfbf;
+    border-radius: 8rpx;
+    padding:20rpx;
+    width: 590rpx;
+  }
+
+  .page-section-title{
+    display: block;
+    padding: 16rpx 0;
+  }
+
+  .btn-flat {
+    color: rgb(119, 119, 119);
+    padding: 16rpx 48rpx;
+    border-radius: 16rpx;
+    background:#F2DF3A;
+    transition: background 0.3s ease;
+    margin:64rpx 64rpx 180rpx 64rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
+    font-size: 42rpx;
+    font-weight: bolder;
+    /* width:235rpx !important; */
+  }
+
+  .page-section-title{
+    display: flex;
+    font-weight: bold;
+    color:#706c6c;
+    font-size: 35rpx;
+    justify-content: space-between;
+  }
+
+  .page-section {
+    margin-left: 40rpx;
+  }
+
+  .mb {
+    margin-bottom: 30rpx;
+  }
+
+  .dog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40rpx; 
+  }
+
+  .yellow-circle {
+    border: #F2DF3A 10rpx solid;
+    border-radius: 50%; 
+  }
+  
+  image{
+    margin:0rpx;
+    padding: 0rpx;
+  }
+
+  radio {
+    visibility: hidden;
+    width:0;
+  }
+
+  .bold-font {
+
+    font-weight: bold;
+    font-size: 40rpx;
+    display: block;
+    margin: 60rpx 20rpx 20 rpx 20rpx;
+  }
+
+  .favorites-container {
+    margin: 40rpx;
+  }
+
+  .user-text {
+    display: block;
+    margin-top: 40rpx;
+    font-size: 35rpx;
+  }
+
+  .horizontal-line {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #9E9E9E;
+    margin: 40rpx 0;
+  }
+
+  .edit-icon {
+    width: 70rpx;
+    height: 70rpx;
+  }
+
+  .edit-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  

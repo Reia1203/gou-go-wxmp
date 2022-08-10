@@ -1,19 +1,31 @@
 <navbar />
 
 <view class="top-margin"> </view>
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{dog_name}}">
-      <image class="userinfo-avatar" src="{{picture_url}}"></image>
-      <view class="dog_name">{{dog_name}}</view>
+  <view class="container">
+    <view class="userinfo">
+    
+      <block wx:if="{{picture_url}}">
+        <image class="userinfo-avatar" src="{{picture_url}}"></image>
+      </block>
+      <block wx:if="{{!picture_url}}">
+        <image class="userinfo-avatar" src="/image/dog.svg"></image>
+      </block>
+      <view class="edit-flex">
+        <block wx:if="{{dog_name}}">
+          <view class="dog_name">{{dog_name}}</view>
+        </block>
+        <block wx:if="{{!dog_name}}">
+          <view class="dog_name">Shanghai Dog</view>
+        </block>
+        
+        <image class="edit-icon" src="/image/pencil.svg" bindtap="goToDogProfile"></image>
+    </view>
 
       <!-- <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Add my Dog Profile </button> -->
-    </block> 
-    <block wx:else>
-      <button class="yellow-btn" wx:if="{{!dog_name}}" bindtap="goToDogProfile"> Add my Dog Profile </button>
+    </view>
+</view>
 
-    </block>
-  </view>
+  
 
   <!-- <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
       <open-data class="userinfo-nickname" type="userNickName"></open-data>
@@ -31,11 +43,14 @@
   </view> -->
 
 
-<text class="bold-text">My Favorite Places</text>
+
 <view class="favorites-container">
+  <text class="bold-text">My Favorite Places</text>
+  <block wx:if="{{spaces.length === 0}}" >
+  <view class="user-text">You don't have any favorites...yet!</view> </block>
   <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
-  </image>
+    <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg" class="space-img" mode="aspectFill"></image>
+  <image wx:if="{{space.image}}" src="{{ space.image }}" class="space-img" mode="aspectFill"></image>
   <view class="name-container">
     
     <view class="card-product-infos">
@@ -62,7 +77,7 @@
 </view>
     <!-- <text class="yellow-btn">See More</text> -->
   </view>
-</view>
+
 
 <view class="bottom-margin"> </view>
 

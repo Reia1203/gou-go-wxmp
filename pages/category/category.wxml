@@ -1,14 +1,20 @@
 <navbar />
 <view class="top-margin"> </view>
 
-  <text wx:if="{{spaces[0].category !== 'Other'}}" class="category-name">{{spaces[0].category}}s</text>
-  <text wx:if="{{spaces[0].category === 'Other'}}" class="category-name">{{spaces[0].category}}</text>
+  <text wx:if="{{spaces[0].category !== 'Other'}}" class="category-name">Paw-Friendly {{spaces[0].category}}s</text>
+  <text wx:if="{{spaces[0].category === 'Other'}}" class="category-name">{{spaces[0].category}} Paw-Friendly Places</text>
 
+  <text wx:if="{{spaces[0].category === 'Restaurant'}}" class="category-text">If you're really good the human might share their food with you!</text>
+  <text wx:if="{{spaces[0].category === 'Bar'}}" class="category-text">Let the human grab a drink while you mingle with some other dog pals!</text>
+  <text wx:if="{{spaces[0].category === 'Cafe'}}" class="category-text">No coffee for you, but you might find some croissant crumbs if you're lucky!</text>
+  <text wx:if="{{spaces[0].category === 'Park'}}" class="category-text">The human said we're going to the park - zoomies activated!</text>
+  <text wx:if="{{spaces[0].category === 'Vet'}}" class="category-text">Not feeling great? Here's some vets near you.</text>
+  <text wx:if="{{spaces[0].category === 'Other'}}" class="category-text">Who knew I could go to these places?!</text>
 
 
   <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
-  </image>
+    <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg" class="space-img" mode="aspectFill"></image>
+  <image wx:if="{{space.image}}" src="{{ space.image }}" class="space-img" mode="aspectFill"></image>
   <view class="name-container">
     
     <view class="card-product-infos">
