@@ -189,8 +189,8 @@ Page({
   validateForm(formData){
     const Validator = require('../../libs/validator.js');
     let rules = { 
-      name: [{message: 'Please enter the name', required: true }],
-      address: [{message: 'Please enter the address', required: true }]
+      name: [{message: 'Please enter the location name.', required: true }],
+      address: [{message: 'Please enter the address.', required: true }]
     }
     let validator = new Validator(rules);
     let error = validator.validate(formData);

@@ -4,15 +4,12 @@
     "pages/landing/landing",
     "pages/user/user",
     "pages/search/search",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/show/show",
     "pages/category/category",
     "pages/spaceform/spaceform",
     "pages/review/review",
     "pages/allReviews/allReviews",
-    "pages/picker/picker",
-    "pages/textarea/textarea",
     "pages/map/map",
     "pages/dogprofile/dogprofile"
   ],
@@ -56,8 +53,8 @@
       },
       {
         "pagePath": "pages/user/user",
-        "iconPath": "image/user.png",
-        "selectedIconPath": "image/user-select.png"
+        "iconPath": "image/dog.png",
+        "selectedIconPath": "image/dog-select.png"
       }
     ]
   },

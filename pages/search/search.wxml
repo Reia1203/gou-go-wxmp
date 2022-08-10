@@ -16,8 +16,8 @@
 
 <view wx:if="{{spaces.length > 0}}">
   <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
-  </image>
+    <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg" class="space-img" mode="aspectFill"></image>
+  <image wx:if="{{space.image}}" src="{{ space.image }}" class="space-img" mode="aspectFill"></image>
   <view class="name-container">
     
     <view class="card-product-infos">

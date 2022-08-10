@@ -36,7 +36,9 @@
 <text class="landing-text">Paw-friendly places near you...</text>
 
 <view wx:for="{{spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
+  
+  <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg" class="space-img" mode="aspectFill"></image>
+  <image wx:if="{{space.image}}" src="{{ space.image }}" class="space-img" mode="aspectFill">
   </image>
   <view class="name-container">
     

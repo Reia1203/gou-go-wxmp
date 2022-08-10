@@ -1,14 +1,22 @@
 <navbar />
 <view class="top-margin"> </view>
 
-<image src="/image/dogs_brunch.png" class="hero-img" mode="aspectFill"></image>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image hero-img" mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+<!-- <image src="/image/hero-img-3.jpg" class="hero-img" mode="aspectFill"></image> -->
 
 
 <view class="home-container" wx:if="{{animation === false}}">
   <view style="display: none;">
     <text class="home-bold">Looking for dog-friendly places in Shanghai?</text>
     <text class="home-small">Use Gou-Go to keep your dog on the go!</text>
-    <text class="home-btn" bindtap="goToLanding">Browse Locations ></text>
+    <text class="home-btn" bindtap="goToLanding">Browse ></text>
   </view>
 </view>
 
@@ -16,7 +24,9 @@
   <view style="display: block; transition: display 5s ease-in;">
     <text class="home-bold">Looking for dog-friendly places in Shanghai?</text>
     <text class="home-small">Use Gou-Go to keep your dog on the go!</text>
-    <text class="home-btn" bindtap="goToLanding">Browse Locations ></text>
+    
   </view>
 </view>
-<view class="bottom-margin"> </view>
+
+<text class="home-btn" bindtap="goToLanding">Browse ></text>
+<!-- <view class="bottom-margin"> </view> -->

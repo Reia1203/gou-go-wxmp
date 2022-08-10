@@ -13,7 +13,8 @@
 
 .avatar-container{
   margin-top: 10rpx;
-  margin-left:28rpx;
+  margin-left:15rpx;
+  margin-right: 15rpx;
 }
 /* 
 .row-container {
@@ -41,7 +42,7 @@
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   border: 1rpx solid #c2bfbf;
   border-radius: 8rpx;
-  padding:10rpx;
+  padding:20rpx;
   width: 590rpx;
 }
 
@@ -97,9 +98,19 @@ radio {
   width:0;
 }
 
+.ml {
+  margin-left: 28rpx;
+}
+
+
+
 .yellow-circle {
   border: #F2DF3A 10rpx solid;
   border-radius: 50%; 
+}
+
+.page-section {
+  margin-left: 40rpx;
 }
 
 image{

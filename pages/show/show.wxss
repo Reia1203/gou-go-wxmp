@@ -9,7 +9,7 @@
   font-weight: bold;
   font-size: 40rpx;
   display: block;
-  margin-bottom: 40rpx;
+  margin-bottom: 20rpx;
 }
 
 .space_name {
@@ -23,12 +23,35 @@
   margin-bottom: 40rpx;
 }
 
+.address-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-flex {
+  display: flex;
+}
+
+.space-name {
+  width: 70%;
+}
+
+.space-name-address {
+  width: 100%;
+}
+
+.paw-rating {
+  width: 50rpx !important;
+  height: 50rpx !important;
+  margin-top: 30rpx;
+}
+
 .features-text {
   font-size: 35rpx;
   display: flex;
   flex-wrap: wrap;
   gap: 10rpx 20rpx;
-  width: 70%;
+  width: 85%;
 
 }
 .feature {
@@ -49,15 +72,21 @@ border-radius: 25rpx;
 
 }
 
+.space-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* .space-info text {
   padding: 10rpx 0;
   text-align: center;
 } */
 
 .space-text {
-  text-align:center;
+  /* text-align:center; */
   font-size: 35rpx;
   color: #9E9E9E;
+  width: 70%;
   /* margin-bottom: 30rpx; */
 }
 
@@ -108,12 +137,12 @@ border-radius: 25rpx;
   
 }
 
-.add-review image{
+/* .add-review image{
   width: 80rpx;
   height: 80rpx;
   align-items: center;
   margin: 40rpx auto;
-}
+} */
 
 
 .rec-container {
@@ -130,9 +159,14 @@ border-radius: 25rpx;
 }
 
 .map-icon {
-  width: 100rpx !important;
-  height: 100rpx !important;
-  margin-top: 25rpx;
+  width: 70rpx !important;
+  height: 70rpx !important;
+  /* margin-top: 25rpx; */
+  
+}
+.map-position {
+
+  text-align: end;
 }
 
 .heart-icon {
@@ -150,8 +184,8 @@ border-radius: 25rpx;
 
 
 .review-img {
-  width: 150rpx;
-  height: 150rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 .review-text {
   width: 60%;

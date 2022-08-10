@@ -4,7 +4,8 @@
 
 <view class="space-container">
   <view class="favorite-container"> 
-    <image src="{{space.image}}" mode="aspectFill"></image>
+    <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg"  mode="aspectFill"></image>
+    <image wx:if="{{space.image}}" src="{{space.image}}" mode="aspectFill"></image>
     <view wx:if="{{space.favorited === true}}" class="heart-icon" bindtap="favorite_toggle">
     <image src="/image/heart-fill.svg" ></image>
     </view>
@@ -15,18 +16,95 @@
   <view class="space-info">
     <view>
       <view class="map-flex">
-        <view>
-          <text class="bold-font space_name">{{space.name}}</text>
-          <text class="space-text" >{{space.address}}</text>
+        <view class="space-name-address">
+          <view class="space-flex">
+            <text class="bold-font space_name">{{space.name}}</text>
+              <view wx:if="{{space.review_avg >= .0001 && space.review_avg <= .7}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/half-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= .71 && space.review_avg <= 1.3}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 1.31 && space.review_avg <= 1.7}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/half-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 1.71 && space.review_avg <= 2.3}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 2.31 && space.review_avg <= 2.7}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/half-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                
+              </view>
+              <view wx:if="{{space.review_avg >= 2.71 && space.review_avg <= 3.3}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 3.31 && space.review_avg <= 3.7}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/half-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 3.71 && space.review_avg <= 4.3}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/empty-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 4.31 && space.review_avg <= 4.7}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/half-paw.svg"></image>
+              </view>
+              <view wx:if="{{space.review_avg >= 4.71}}"  class="rating-flex"> 
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+                <image class="paw-rating" src="/image/full-paw.svg"></image>
+              </view>
+
+          </view>
+          <view class="address-flex">
+            <text class="space-text" >{{space.address}}</text>
+            <view class="map-position">
+              <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
+              <view>{{distance}} km</view>
+          </view>
         </view>
-        <view>
-          <image bindtap="goToMap" src="/image/map.svg" class="map-icon"></image>
-          <view>{{distance}} km</view>
         </view>
+        
       </view>
       <view class="features-text">
         <text class="feature">{{space.category}}</text>
-        <text wx:if="{{space.category === 'Restaurant'}}" class="feature-small" >{{space.sub_category}} </text>
+        <text wx:if="{{space.category === 'Restaurant'}}" class="feature" >{{space.sub_category}} </text>
 
         
         <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
@@ -46,8 +124,6 @@
 
 </view>
 
-<!-- <view wx:if="{{space.review_avg >= 3}}">I am bigger than 3!</view>
-<view wx:if="{{space.review_avg <= 3}}">I am less than 3!</view> -->
 
 
 <text class="horizontal-line"></text>
@@ -59,16 +135,25 @@
     
   </view>
   <view class="review-preview">
-    <image src="/image/dog.svg" class="review-img"></image>
+    <block wx:if="{{!space.user.picture_url}}">
+      <image src="/image/dog.svg" class="review-img"></image>
+    </block>
+    <block wx:if="{{space.user.picture_url}}">
+      <image src="{{space.user.picture_url}}" class="review-img"></image>
+    </block>
     <view class="review-text">
-      <text class="review-name">Shanghai Dog</text>
+      <block wx:if="{{!space.user.dog_name}}">
+        <text class="review-name">Shanghai Dog</text>
+      </block>
+      <block wx:if="{{space.user.dog_name}}">
+        <text class="review-name">{{space.user.dog_name}}</text>
+      </block>
       <text class="review-date">{{space.featured_review.date}}</text>
       <text class="review-date">Paw-friendly rating: {{space.featured_review.rating}}/5</text>
-      
-      <text class="review-comment">"{{space.featured_review.comment}}"</text>
+      <text class="review-comment" wx:if="{{!space.featured_review.comment}}">"Woof woof! I was too busy having a paw-some time to fill out a review!"</text>
+      <text class="review-comment" wx:if="{{space.featured_review.comment}}">"{{space.featured_review.comment}}"</text>
       <view class="read-btn">
-      <view class="yellow-btn" bindtap="seeAllReviews" data-id="{{space.id}}">Read
-      More</view>
+      <view class="yellow-btn" bindtap="seeAllReviews" data-id="{{space.id}}">More Reviews</view>
   </view>
 
    
@@ -97,8 +182,8 @@
 <view class="rec-container">
   <text class="bold-font">Other Recommendations</text>
   <view wx:for="{{space.recommended_spaces}}" wx:for-item="space" bindtap="goToSpace" data-id="{{space.id}}" class="card-product" wx:key="unique">
-  <image src="{{ space.image }}" class="space-img" mode="aspectFill">
-  </image>
+    <image wx:if="{{!space.image}}" src="/image/empty-shop.jpg" class="space-img" mode="aspectFill"></image>
+  <image wx:if="{{space.image}}" src="{{ space.image }}" class="space-img" mode="aspectFill"></image>
   <view class="name-container">
     
     <view class="card-product-infos">
@@ -109,16 +194,16 @@
     </view>
       <view class="features-text-small">
           <text class="feature-small">{{space.category}}</text>
-          <text wx:if="{{space.sub_category !== null}}" class="feature-small" >{{space.sub_category}}</text>
+          <text wx:if="{{space.category === 'Restaurant'}}" class="feature-small" >{{space.sub_category}} </text>
           <!-- <text wx:if="{{space.category === 'Food' || 'restaurant'}}" class="feature-small" >{{space.sub_category}} </text> -->
 
           <!-- <text class="space-text">Dogs allowed: {{space.access}}</text> -->
-          <view class= "access-feature" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
+          <block class= "access-feature" wx:for="{{space.features}}" wx:for-item="feature" wx:key="unique">
             <text wx:if="{{feature === 'indoor'}}" class="feature-small">Indoors</text>
             <text wx:if="{{feature === 'outdoor'}}" class="feature-small">Outdoors
             </text>
 
-          </view>
+          </block>
         </view>
       <!-- <view class="p">{{space.features}}</view> -->
   </view>

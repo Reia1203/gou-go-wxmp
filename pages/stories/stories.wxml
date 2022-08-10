@@ -1,8 +1,0 @@
-<!--pages/stories/stories.wxml-->
-<text>pages/stories/stories.wxml</text>
-
-<view class="container-form">
-  <view>
-    <text>Technology is the result of accumulated knowledge and application of skills, methods, and processes used in industrial production and scientific research. Technology is embedded in the operation of all machines and electronic devices, with or without detailed knowledge of their function, for the intended purpose of an organization.</text>
-  </view>
-</view>

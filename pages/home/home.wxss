@@ -1,15 +1,22 @@
 .hero-img {
   margin: 0;
-  align-items: center;
   width: 100%;
-  height: 300px;
-  border-radius: 5rpx;
+  height: 100vh;
+  /* opacity: 90%; */
+  position: relative;
+  z-index: -100;
 }
 
 .home-container {
-  margin: 20rpx;
+  margin: 20rpx 90rpx;
   text-align: center;
-
+  position: absolute;
+  display: inline;
+  z-index: 20;
+  top: 325rpx;
+  right: 1rpx;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5rpx;
 }
 
 .home-container text {
@@ -17,34 +24,48 @@
 }
 
 .home-bold {
-  margin: 90rpx 0;
+  margin: 40rpx 0;
   font-size: 55rpx;
   font-weight: bold;
   color: #0078AA;
   /* color: #B667F1; */
+  text-shadow: 1px 1px #c7c5c5;
 
   
 }
 
 .home-small {
-  margin: 20rpx 80rpx;
-  margin-bottom: 90rpx;
+  margin: 80rpx 80rpx 40rpx;
   font-size: 40rpx;
+  font-weight: bold;
+  text-shadow: 1px 1px #c7c5c5;
 }
 
 .home-btn {
-  margin: auto;
-  background-color: #F2DF3A;
-  padding: 12px 24px;
-  width: 50%;
+  margin: 90rpx auto;
+  background-color: #0078AA;
+  padding: 10px 20px;
+  width: 35%;
   font-weight: bold;
   border-radius: 5rpx;
+  color: white;
+  font-size: 55rpx;
+  z-index: 80;
+  position: absolute;
+  top: 1300rpx;
+  right: 220rpx;
+  text-align: center;
 }
 
 .bottom-margin {
   height: 230rpx;
 }
 
-.top-margin {
-  height: 210rpx;
+/* .top-margin {
+  height: 163rpx;
+} */
+
+swiper {
+  height:100vh;
+  /* width:100%; */
 }

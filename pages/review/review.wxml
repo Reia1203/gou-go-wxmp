@@ -26,6 +26,7 @@
 <view class="container">
 <view class="h2">{{space.name}} Review</view>
 
+
   <view >Paw-friendly rating:</view>
   <view class="scoreContent" id="scoreContent">
     <block wx:for='{{5}}' wx:key='item'>

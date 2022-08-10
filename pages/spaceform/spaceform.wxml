@@ -10,7 +10,6 @@
     <text class="intro-text">Found a paw-friendly place that isn't on Gou-Go? Add it here so other good boys and girls can visit, too! </text>
   </view>
  
-  <view wx:if="{{validationError}}">{{validationError.msg}}</view>
     <form bindsubmit="submit">
       <view class="page-section mb">
         <view class="page-section-title">Name:</view>
@@ -60,6 +59,7 @@
         <image wx:for="{{image_url}}" src="{{item}}" wx:key="unique" mode="aspectFit" bindtap="uploadImage"></image>
         <button bindtap="uploadImage" class="btn-edit">Edit</button>     
   </view>
+      <view class="error-msg" wx:if="{{validationError}}">{{validationError.msg}}</view>
 
       <button form-type="submit" class="btn-flat">Submit</button>
     </form>
