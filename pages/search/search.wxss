@@ -1,5 +1,6 @@
 .weui-input {
   padding: 10rpx 30rpx;
+  background-color: white;
 }
 
 
