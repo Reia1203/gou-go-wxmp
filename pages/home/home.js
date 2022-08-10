@@ -12,11 +12,11 @@ Page({
     canIUseGetUserProfile: false,
     animation: false, 
     imgUrls: [
-      '/image/hero-img-1.jpg',
-      '/image/hero-img-3.png',
-      '/image/hero-img-2.png',
-      '/image/hero-img-4.jpg',
-      '/image/hero-img-5.jpg',
+      '/image/landing-dog1.jpeg',
+      '/image/landing-dog2.jpg',
+      '/image/landing-dog3.jpg',
+      '/image/landing-dog4.jpeg',
+      '/image/landing-dog5.jpeg'
 
     ],
     indicatorDots: false,  //Whether to display panel indicator points
