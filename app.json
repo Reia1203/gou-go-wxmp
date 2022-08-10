@@ -53,7 +53,7 @@
       },
       {
         "pagePath": "pages/user/user",
-        "iconPath": "image/dog.png",
+        "iconPath": "image/Dog.png",
         "selectedIconPath": "image/dog-select.png"
       }
     ]

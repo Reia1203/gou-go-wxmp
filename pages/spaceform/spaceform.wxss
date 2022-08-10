@@ -5,6 +5,7 @@
   border: 1rpx solid #c2bfbf;
   border-radius: 8rpx;
   padding:10rpx;
+  background-color: white;
 }
 
 .page-section-title{
@@ -89,6 +90,7 @@ image{
 .p{
   /* color:#7a7676; */
   font-size: 32rpx;
+  line-height: 60rpx;
 }
 
 .mb {
@@ -102,6 +104,7 @@ image{
   border-radius: 8rpx;
   text-align: center;
   padding: 10rpx;
+  background-color: white;
 
 }
 
@@ -152,3 +155,4 @@ checkbox {
   font-size: 35rpx;
   font-weight: bold;
 }
+

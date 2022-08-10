@@ -48,6 +48,7 @@
   padding:20rpx;
   margin: 30rpx 40rpx 30rpx 0;
   width:93%;
+  background-color: white;
 }
 
 .container{
