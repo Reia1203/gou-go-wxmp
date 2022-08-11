@@ -22,7 +22,7 @@ Page({
     image_url:["../../image/placeholder.png"],
     multiArray: [
       ['Restaurant', 'Bars','Cafes','Parks','Vets','Other'], 
-      ['American','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican', 'Spanish', 'Thai', 'Western']
+      ['American','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexican', 'Spanish', 'Thai', 'Vietnamese', 'Western']
     ],
     // objectMultiArray: [
     //   [
@@ -99,7 +99,7 @@ Page({
     //   ]
     // ],
     subCategoryArray: [
-      ['American', 'Buffet','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai'],
+      ['American','Chinese', 'Fast Food','French','Italian','Indian','Japanese','Korean','Mexcican','Thai', 'Vietnamese', 'Western'],
       ['All Bars'],
       ['All Cafes'],
       ['All Parks'],

@@ -53,7 +53,7 @@
   z-index: 80;
   position: absolute;
   top: 1300rpx;
-  right: 220rpx;
+  right: 205rpx;
   text-align: center;
 }
 
