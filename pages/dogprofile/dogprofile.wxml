@@ -22,6 +22,6 @@
           <input class="weui-input" name="dog_name" placeholder="" />
     </view>
 
-    <button form-type="submit" class="btn-flat">Save</button>
+    <button form-type="submit" class="btn-flat">Submit</button>
   </form>
 </view>

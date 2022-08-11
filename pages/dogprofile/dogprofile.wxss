@@ -9,12 +9,15 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 40rpx; 
+  width:100%;
+  text-align: center;
 }
 
 .avatar-container{
   margin-top: 10rpx;
-  margin-left:15rpx;
-  margin-right: 15rpx;
+  /* margin-bottom: 10rpx; */
+  /* margin-left:15rpx;
+  margin-right: 15rpx; */
 }
 /* 
 .row-container {
@@ -30,9 +33,9 @@
 } */
 
 .dog-avatar {
-  height: 180rpx;
-  width: 180rpx;
-  margin: 20rpx 20rpx;
+  height: 170rpx;
+  width: 170rpx;
+  margin: 13rpx 13rpx 13rpx 13rpx;
   border:rgba(0,0,0,0) 10rpx solid;
 }
 
@@ -42,8 +45,9 @@
   box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.04);
   border: 1rpx solid #c2bfbf;
   border-radius: 8rpx;
-  padding:20rpx;
-  width: 590rpx;
+  padding:10rpx;
+  width: 525rpx;
+  background-color: white;
 }
 
 .page-section-title{
@@ -99,7 +103,7 @@ radio {
 }
 
 .ml {
-  margin-left: 28rpx;
+  margin-left: 86rpx;
 }
 
 
@@ -110,7 +114,8 @@ radio {
 }
 
 .page-section {
-  margin-left: 40rpx;
+  margin-left: 86rpx;
+
 }
 
 image{
